@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Андрей Володченко](https://up.htmlacademy.ru/htmlcss/18/user/447815).
-* Наставник: [Ольга Вадясова] (https://htmlacademy.ru/profile/ad-ovo).
+* Наставник: [Ольга Вадясова](https://htmlacademy.ru/profile/ad-ovo).
 
 ---
 
