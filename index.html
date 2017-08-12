@@ -222,36 +222,43 @@
         <h2 class="visually hidden">Преимущества</h2>
         <ul class="lower-slider">
           <li class="lower-slider-1">
-            <p class="lower-slider-switch">
-              <a href="#" class="button lower-slider-button">Доставка</a>
-            </p>
-            <p class="lower-slider-description">
+            <form class="lower-slider-switch" action="index.html" method="post">
+              <label for="lower-switch-1">
+                <input type="radio" name="lower-slider-switch" id="lower-switch-1" value="Доставка">Доставка
+                <!-- Значения не связываются между собой в разных формах :( В общем здесь нипонятна, нужно будет мне объяснить ) -->
+              </label>
+            </form>
+            <div class="lower-slider-description">
               <h3>Доставка</h3>
               <p class="advantage-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
               <img src="#" alt="Картинка доставки" width="140" height="160">
-            </p>
+            </div>
           </li>
           <li class="lower-slider-2">
-            <p class="lower-slider-switch">
-              <a href="#" class="button lower-slider-button">Гарантия</a>
-            </p>
-            <p class="lower-slider-description">
+            <form class="lower-slider-switch" action="index.html" method="post">
+              <label for="lower-switch-2">
+                <input type="radio" name="lower-slider-switch" id="lower-switch-2" value="Гарантия">Гарантия
+              </label>
+            </form>
+            <div class="lower-slider-description">
               <h3>Гарантия</h3>
               <p class="advantage-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
 Товар, не дом, конечно же.</p>
               <img src="#" alt="Картинка гарантии" width="170" height="200">
-            </p>
+            </div>
           </li>
           <li class="lower-slider-3">
-            <p class="lower-slider-switch">
-              <a href="#" class="button lower-slider-button">Кредит</a>
-            </p>
-            <p class="lower-slider-description">
+            <form class="lower-slider-switch" action="index.html" method="post">
+              <label for="lower-switch-3">
+                <input type="radio" name="lower-slider-switch" id="lower-switch-3" value="Кредит">Кредит
+              </label>
+            </form>
+            <div class="lower-slider-description">
               <h3>Кредит</h3>
               <p class="advantage-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
 условия кредита. Выгодные для нашего банка, разумеется.</p>
               <img src="#" alt="Картинка кредита" width="170" height="180">
-            </p>
+            </div>
           </li>
         </ul>
 
@@ -260,16 +267,16 @@
       <section class="brands">
         <h2 class="visually-hidden">Бренды</h2>
         <ul class="brands-avatars">
-          <li class="brand-1">
+          <li class="brand brand-1">
             <img src="#" alt="dji" width="140" height="90">
           </li>
-          <li class="brand-2">
+          <li class="brand brand-2">
             <img src="#" alt="sp gadgets" width="260" height="45">
           </li>
-          <li class="brand-3">
+          <li class="brand brand-3">
             <img src="#" alt="GoPro" width="205" height="60">
           </li>
-          <li class="brand-4">
+          <li class="brand brand-4">
             <img src="#" alt="ViVe" width="195" height="65">
           </li>
         </ul>
@@ -286,14 +293,35 @@
           <li>ЖелДорЭкспедиция</li>
         </ul>
         <a href="#" class="button about-us-button">Подробнее о нас</a>
-
       </section>
 
       <section class="contacts">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <a href="#" class="map"><img src="#" alt="Карта с адресом" width="560" height="230"></a>
+        <a href="#" class="map">
+          <img src="#" alt="Карта с адресом" width="560" height="230"></a>
         <a href="#" class="button contacts-button">Напишите нам</a>
+      </section>
+
+      <section class="modal modal-write-us">
+        <h2 class="visually hidden">Форма обратной связи</h2>
+        <form class="write-us-form" action="index.html" method="post">
+          <label for="name">Ваше имя:
+            <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста" value=""></label>
+          <label for="email">Ваш e-mail:
+            <input type="text" name="email" id="email" value="" placeholder="Для отправки ответа"></label>
+            <br>
+          <label for="write-us-area">Текст письма:
+            <textarea name="write-us-area" id="write-us-area" placeholder="В свободной форме" rows="16" cols="76"></textarea>
+          </label>
+        </form>
+        <button type="submit" name="button" class="button submit-button">Отправить</button>
+        <span class="modal-close">X</span>
+      </section>
+
+      <section class="modal modal-popup-map">
+        <h2 class="visually hidden">Всплывающая карта</h2>
+        <a href="#" class="popup-map"></a>
       </section>
 
     </main>
