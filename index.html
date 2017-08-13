@@ -2,387 +2,515 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
+    <title>HTML Academy: Девайс
+    </title>
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header container">
       <nav class="main-nav">
         <a class="main-header-logo">
-          <img src="#" alt="DEVICE" width="165" height="40">
+          <p>DEVICE
+          </p>
         </a>
-        <ul class="header-lower-links">
+        <form class="search-form" action="index.html" method="get">
+          <input type="search" name="search-form">
+        </form>
+        <ul class="header-service-links">
           <li>
-            <a href="#">Каталог товаров</a>
+            <a href="#">Каталог товаров
+            </a>
             <ul class="header-dropping-list">
-              <li class="header-dropping-list-part">
-                <ul class="header-dropping-list-part-1">
                   <li>
-                    <a href="#">Виртуальная реальность</a></li>
+                    <a href="#">Виртуальная реальность
+                    </a>
+                  </li>
+
                   <li>
-                    <a href="#">Моноподы для селфи</a></li>
+                    <a href="#">Моноподы для селфи
+                    </a>
+                  </li>
+
                   <li>
-                    <a href="#">Экшн-камеры</a></li>
-                </ul>
-              </li>
-              <li class="header-dropping-list-part">
-                <ul class="header-dropping-list-part-2">
+                    <a href="#">Экшн-камеры
+                    </a>
+                  </li>
+
                   <li>
-                    <a href="#">Фитнес-браслеты</a></li>
+                    <a href="#">Фитнес-браслеты
+                    </a>
+                  </li>
+
                   <li>
-                    <a href="#">Умные часы</a></li>
-                </ul>
-              </li>
-              <li class="header-dropping-list-part">
-                <ul class="header-dropping-list-part-3">
+                    <a href="#">Умные часы
+                    </a>
+                  </li>
+
                   <li>
-                    <a href="#">Квадрокоптеры</a></li>
-                </ul>
-              </li>
+                    <a href="#">Квадрокоптеры
+                    </a>
+                  </li>
             </ul>
+            <!-- header-dropping-list-end -->
+
           </li>
+
           <li>
-            <a href="#">Доставка</a></li>
+            <a href="#">Доставка
+            </a>
+          </li>
+
           <li>
-            <a href="#">Гарантия</a></li>
+            <a href="#">Гарантия
+            </a>
+          </li>
+
           <li>
-            <a href="#">Контакты</a></li>
+            <a href="#">Контакты
+            </a>
+          </li>
         </ul>
+        <!-- header-service-links-end -->
+
       </nav>
-      <!-- Здесь тоже сомневаюсь нужно ли было не включать форму и ссылки. Исправлю если нужно -->
-      <form class="search-form" action="index.html" method="get">
-        <input type="search" name="search-form" value="">
-      </form>
-      <!-- С формой оставил по дефолту экшн и изменил метод, но не уверен вообще.  -->
-      <ul class="header-upper-links">
+
+      <ul class="header-user-links">
         <li>
-          <a href="#">Войти</a></li>
+          <a href="#">Войти
+          </a>
+        </li>
+
         <li>
-          <a href="#">Сравнить</a></li>
+          <a href="#">Сравнить
+          </a>
+        </li>
+
         <li>
-          <a href="#">Корзина</a></li>
-        <li class="authorized">
-          <a href="#">{username}</a></li>
-        <li class="authorized exit-button">
-          <a href="#">Выйти</a></li>
-          <!-- Здесь сделал (последние 2 элемента списка) вообще по наитию.
-          Честно говоря не могу что-то понять как сделать так,
-          чтобы имя зарегистрированного пользователя отображалось,
-          подскажи как тут правильно сделать пожалуйста :)
-          Ну и кнопка выхода при условии, что кто-то сейчас "зашел" на сайт -->
+          <a href="#">Корзина
+          </a>
+        </li>
       </ul>
+      <!-- header-user-links-end -->
+
     </header>
 
-    <main class="container">
+    <main>
+      <h1 class="visually hidden">Интернет-магазин "Device"
+      </h1>
 
-      <section class="promo-description">
-        <h1 class="visually-hidden">Обзор самых популярных товаров</h1>
+      <section class="promo-description container">
+        <h2 class="visually-hidden">Обзор самых популярных товаров
+        </h2>
+
+        <div class="upper-slider-switch-buttons">
+          <span class="upper-slider-switch-button-1">1
+          </span>
+
+          <span class="upper-slider-switch-button-2">2
+          </span>
+
+          <span class="upper-slider-switch-button-3">3
+          </span>
+        </div>
+        <!-- upper-slider-switch-buttons-end -->
+
         <ul class="upper-slider">
-          <li class="slider-1">
-            <div class="slider-1-container">
-              <img src="#" alt="Самая длинная палка для селфи" width="400" height="485">
+          <li class="slide-1">
+              <img src="http://placehold.it/400x485" alt="Самая длинная палка для селфи" width="400" height="485">
+
               <div class="description-container">
-                <b>Делай селфи, как Бен Стиллер!</b>
-                <span class="slider-number">01</span>
+                <b>Делай селфи,
+                  <br>
+                  как Бен Стиллер!
+                </b>
+
+                <span class="slide-number">01
+                </span>
+
                 <p class="item-description">Самая длинная палка для селфи доступна в нашем магазине.
 Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
                 </p>
-                <div class="slider-links-part">
-                  <a class="button slider-button" href="#">Подробнее</a>
-                  <form class="slider-form" action="index.html" method="post">
-                    <input class="true-value" type="radio" name="upper-slider" value="1">
-                    <input type="radio" name="upper-slider" value="2">
-                    <input type="radio" name="upper-slider" value="3">
-                  </form>
-                  <!-- Честно говоря, не знаю как эти радиобаттаны заставить работать совместно (связать 3 слайдера), нид хелп :) -->
-                </div>
-                <table class="slider-table">
+                  <a class="button slide-button" href="#">Подробнее
+                  </a>
+
+                <table class="slide-table">
                   <tr>
-                    <th>8,5 м</th>
-                    <th>5 кг</th>
-                    <th>Карбон</th>
+                    <th>8,5 м
+                    </th>
+                    <th>5 кг
+                    </th>
+                    <th>Карбон
+                    </th>
                   </tr>
                   <tr>
-                    <td>Длина палки</td>
-                    <td>Вес палки</td>
-                    <td>Материал</td>
+                    <td>Длина палки
+                    </td>
+                    <td>Вес палки
+                    </td>
+                    <td>Материал
+                    </td>
                   </tr>
                 </table>
               </div>
-            </div>
+              <!-- description-container-end -->
+
           </li>
-          <li class="slider-2">
-            <div class="slider-2-container">
-              <img src="#" alt="Мотивирующий фитнес-браслет" width="370" height="500">
+          <!-- slide-1-end -->
+
+          <li class="slide-2">
+              <img src="http://placehold.it/370x500" alt="Мотивирующий фитнес-браслет" width="370" height="500">
+
               <div class="description-container">
-                <b>Худеем правильно!</b>
-                <span class="slider-number">02</span>
+                <b>Худеем
+                  <br>
+                  правильно!
+                </b>
+                <span class="slide-number">02
+                </span>
                 <p class="item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы
 не пропускать занятия и соблюдать диету.
                 </p>
-                <div class="slider-links-part">
-                  <a class="button slider-button" href="#">Подробнее</a>
-                  <form class="slider-form" action="index.html" method="post">
-                    <input type="radio" name="upper-slider" value="1">
-                    <input class="true-value" type="radio" name="upper-slider" value="2">
-                    <input type="radio" name="upper-slider" value="3">
-                  </form>
-                </div>
-                <table class="slider-table">
+                  <a class="button slide-button" href="#">Подробнее
+                  </a>
+
+                <table class="slide-table">
                   <tr>
-                    <th>48 часов</th>
+                    <th>48 часов
+                    </th>
                   </tr>
                   <tr>
-                    <td>Без подзарядки</td>
+                    <td>Без подзарядки
+                    </td>
                   </tr>
                 </table>
               </div>
-            </div>
           </li>
-          <li class="slider-3">
-            <div class="slider-3-container">
-              <img src="#" alt="Квадрокоптер с лазером" width="535" height="330">
+          <!-- slide-2-end -->
+
+          <li class="slide-3">
+              <img src="http://placehold.it/535x330" alt="Квадрокоптер с лазером" width="535" height="330">
+
               <div class="description-container">
-                <b>Порхает как бабочка, жалит как пчела!</b>
-                <span class="slider-number">03</span>
+                <b>Порхает как бабочка, жалит как пчела!
+                </b>
+                <span class="slide-number">03
+                </span>
                 <p class="item-description">Этот обычный, на первый взгляд, квадрокоптер оснащен
 мощным лазером, замаскированным под стандартную камеру.
                 </p>
-                <div class="slider-links-part">
-                  <a class="button slider-button" href="#">Подробнее</a>
-                  <form class="slider-form" action="index.html" method="post">
-                    <input type="radio" name="upper-slider" value="1">
-                    <input type="radio" name="upper-slider" value="2">
-                    <input class="true-value" type="radio" name="upper-slider" value="3">
-                  </form>
-                  <!-- Слайдер не работает как нужно, здесь тоже твоя помощь очень пригодится :)  -->
-                </div>
-                <table class="slider-table">
+                  <a class="button slide-button" href="#">Подробнее
+                  </a>
+
+                <table class="slide-table">
                   <tr>
-                    <th>800 м</th>
-                    <th>50 м</th>
+                    <th>800 м
+                    </th>
+                    <th>50 м
+                    </th>
                   </tr>
                   <tr>
-                    <td>Дальность полета</td>
-                    <td>Радиус поражения</td>
+                    <td>Дальность полета
+                    </td>
+                    <td>Радиус поражения
+                    </td>
                   </tr>
                 </table>
               </div>
+          </li>
+          <!-- slide-3-end -->
+        </ul>
+        <!-- upper-slider-end -->
+
+      </section>
+
+      <section class="shop-category container">
+        <h2 class="visually-hidden">Группы товаров
+        </h2>
+
+        <ul class="item-groups">
+          <li class="item-group">
+            <div class="item-group-cotainer">
+              <a href="#">
+                <img src="http://placehold.it/160x160" alt="Виртуальная реальность" width="160" height="160">
+                <h3 class="item-class-description">Виртуальная реальность
+                </h3>
+              </a>
+            </div>
+          </li>
+
+          <li class="item-group">
+            <div class="item-group-cotainer">
+              <a href="#">
+                <img src="http://placehold.it/160x160" alt="Моноподы для селфи" width="160" height="160">
+                <h3 class="item-class-description">Моноподы для селфи
+                </h3>
+              </a>
+            </div>
+          </li>
+
+          <li class="item-group">
+            <div class="item-group-cotainer">
+              <a href="#">
+                <img src="http://placehold.it/160x160" alt="Экшн-камеры" width="160" height="160">
+                <h3 class="item-class-description">Экшн-камеры
+                </h3>
+              </a>
+            </div>
+          </li>
+
+          <li class="item-group">
+            <div class="item-group-cotainer">
+              <a href="#">
+                <img src="http://placehold.it/160x160" alt="Фитнес-браслеты" width="160" height="160">
+                <h3 class="item-class-description">Фитнес-браслеты
+                </h3>
+              </a>
+            </div>
+          </li>
+
+          <li class="item-group">
+            <div class="item-group-cotainer">
+              <a href="#">
+                <img src="http://placehold.it/160x160" alt="Умные часы" width="160" height="160">
+                <h3 class="item-class-description">Умные часы
+                </h3>
+              </a>
+            </div>
+          </li>
+
+          <li class="item-group">
+            <div class="item-group-cotainer">
+              <a href="#">
+                <img src="http://placehold.it/160x160" alt="Квадрокоптеры" width="160" height="160">
+                <h3 class="item-class-description">Квадрокоптеры
+                </h3>
+              </a>
             </div>
           </li>
         </ul>
-      </section>
-
-      <section class="item-class">
-        <h2 class="visually-hidden">Группы товаров</h2>
-        <table class="item-class-table">
-          <tr class="item-class-image">
-            <td>
-              <a href="#">
-                <img src="#" alt="Виртуальная реальность" width="160" height="160"> <br>
-                <span class="item-class-description">Виртуальная реальность</span>
-                <!-- Здесь думал вместо спанов сделать заголовки 3-го уровня, но лучше у тебя уточнить -->
-              </a>
-            </td>
-            <td>
-              <a href="#">
-                <img src="#" alt="Моноподы для селфи" width="160" height="160"> <br>
-                <span class="item-class-description">Моноподы для селфи</span>
-              </a>
-            </td>
-            <td>
-              <a href="#">
-                <img src="#" alt="Экшн-камеры" width="160" height="160"> <br>
-                <span class="item-class-description">Экшн-камеры</span>
-              </a>
-            </td>
-            <td>
-              <a href="#">
-                <img src="#" alt="Фитнес-браслеты" width="160" height="160"> <br>
-                <span class="item-class-description">Фитнес-браслеты</span>
-              </a>
-            </td>
-            <td>
-              <a href="#">
-                <img src="#" alt="Умные часы" width="160" height="160"> <br>
-                <span class="item-class-description">Умные часы</span>
-              </a>
-            </td>
-            <td>
-              <a href="#">
-                <img src="#" alt="Квадрокоптеры" width="160" height="160"> <br>
-                <span class="item-class-description">Квадрокоптеры</span>
-              </a>
-            </td>
-          </tr>
-        </table>
+        <!-- item-groups-end -->
 
       </section>
 
-      <section class="advantages">
-        <h2 class="visually hidden">Преимущества</h2>
+      <section class="service">
+        <h2 class="visually hidden">Преимущества
+        </h2>
+
+        <div class="lower-slider-switch-buttons">
+          <span class="lower-slider-switch-button-1">1
+          </span>
+
+          <span class="lower-slider-switch-button-2">2
+          </span>
+
+          <span class="lower-slider-switch-button-3">3
+          </span>
+
+        </div>
+        <!-- lower-slider-switch-buttons-end -->
+
         <ul class="lower-slider">
-          <li class="lower-slider-1">
-            <form class="lower-slider-switch" action="index.html" method="post">
-              <label for="lower-switch-1">
-                <input type="radio" name="lower-slider-switch" id="lower-switch-1" value="Доставка">Доставка
-                <!-- Значения не связываются между собой в разных формах :( В общем здесь нипонятна, нужно будет мне объяснить ) -->
-              </label>
-            </form>
-            <div class="lower-slider-description">
-              <h3>Доставка</h3>
-              <p class="advantage-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-              <img src="#" alt="Картинка доставки" width="140" height="160">
+          <li class="lower-slide-1">
+            <div class="lower-slide-description">
+              <h3>Доставка
+              </h3>
+              <p class="advantage-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+              </p>
             </div>
           </li>
-          <li class="lower-slider-2">
-            <form class="lower-slider-switch" action="index.html" method="post">
-              <label for="lower-switch-2">
-                <input type="radio" name="lower-slider-switch" id="lower-switch-2" value="Гарантия">Гарантия
-              </label>
-            </form>
-            <div class="lower-slider-description">
-              <h3>Гарантия</h3>
+
+          <li class="lower-slide-2">
+            <div class="lower-slide-description">
+              <h3>Гарантия
+              </h3>
               <p class="advantage-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
-Товар, не дом, конечно же.</p>
-              <img src="#" alt="Картинка гарантии" width="170" height="200">
+                <br>
+                Товар, не дом, конечно же.
+              </p>
             </div>
           </li>
-          <li class="lower-slider-3">
-            <form class="lower-slider-switch" action="index.html" method="post">
-              <label for="lower-switch-3">
-                <input type="radio" name="lower-slider-switch" id="lower-switch-3" value="Кредит">Кредит
-              </label>
-            </form>
-            <div class="lower-slider-description">
-              <h3>Кредит</h3>
+
+          <li class="lower-slide-3">
+            <div class="lower-slide-description">
+              <h3>Кредит
+              </h3>
               <p class="advantage-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
-условия кредита. Выгодные для нашего банка, разумеется.</p>
-              <img src="#" alt="Картинка кредита" width="170" height="180">
+условия кредита. Выгодные для нашего банка, разумеется.
+              </p>
             </div>
           </li>
         </ul>
-
+        <!-- lower-slider-end -->
       </section>
 
-      <section class="brands">
-        <h2 class="visually-hidden">Бренды</h2>
-        <ul class="brands-avatars">
-          <li class="brand brand-1">
-            <img src="#" alt="dji" width="140" height="90">
+      <section class="brands container">
+        <h2 class="visually-hidden">Бренды
+        </h2>
+
+        <ul class="brands-list">
+          <li class="brands-item">
+            <img src="http://placehold.it/140x90" alt="dji" width="140" height="90">
           </li>
-          <li class="brand brand-2">
-            <img src="#" alt="sp gadgets" width="260" height="45">
+
+          <li class="brands-item">
+            <img src="http://placehold.it/260x45" alt="sp gadgets" width="260" height="45">
           </li>
-          <li class="brand brand-3">
-            <img src="#" alt="GoPro" width="205" height="60">
+
+          <li class="brands-item">
+            <img src="http://placehold.it/205x60" alt="GoPro" width="205" height="60">
           </li>
-          <li class="brand brand-4">
-            <img src="#" alt="ViVe" width="195" height="65">
+
+          <li class="brands-item">
+            <img src="http://placehold.it/195x65" alt="ViVe" width="195" height="65">
           </li>
         </ul>
+        <!-- brands-list-end -->
       </section>
 
-      <section class="about-us">
-        <h2>О нас</h2>
-        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-        <!-- Может здесь 1 абзац и <br>  сделать? -->
-        <ul class="about-us-partners">
-          <li>Деловые Линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
-        </ul>
-        <a href="#" class="button about-us-button">Подробнее о нас</a>
-      </section>
+      <section class="reference-block container">
+        <section class="about-us">
+          <h2>О нас
+          </h2>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+          </p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+          </p>
 
-      <section class="contacts">
-        <h2>Контакты</h2>
-        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <a href="#" class="map">
-          <img src="#" alt="Карта с адресом" width="560" height="230"></a>
-        <a href="#" class="button contacts-button">Напишите нам</a>
+          <ul class="about-us-partners">
+            <li>Деловые Линии
+            </li>
+            <li>Автотрейдинг
+            </li>
+            <li>ЖелДорЭкспедиция
+            </li>
+          </ul>
+
+          <a href="#" class="button about-us-button">Подробнее о нас
+          </a>
+        </section>
+
+        <section class="contacts">
+          <h2>Контакты
+          </h2>
+          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+          </p>
+
+          <a href="#" class="map">
+            <img src="http://placehold.it/560x230" alt="Карта с адресом" width="560" height="230">
+          </a>
+
+          <a href="#" class="button contacts-button">Напишите нам
+          </a>
+        </section>
       </section>
 
       <section class="modal modal-write-us">
-        <h2 class="visually hidden">Форма обратной связи</h2>
+        <h2 class="visually hidden">Форма обратной связи
+        </h2>
+
+        <span class="modal-close">X
+        </span>
+
         <form class="write-us-form" action="index.html" method="post">
-          <label for="name">Ваше имя:
-            <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста" value=""></label>
-          <label for="email">Ваш e-mail:
-            <input type="text" name="email" id="email" value="" placeholder="Для отправки ответа"></label>
-            <br>
-          <label for="write-us-area">Текст письма:
-            <textarea name="write-us-area" id="write-us-area" placeholder="В свободной форме" rows="16" cols="76"></textarea>
+          <label>Ваше имя:
+            <input type="text" name="name" placeholder="Представьтесь, пожалуйста">
           </label>
+
+          <label>Ваш e-mail:
+            <input type="text" name="email" placeholder="Для отправки ответа">
+          </label>
+
+          <label>Текст письма:
+            <textarea name="customer-comments" placeholder="В свободной форме" rows="16" cols="76">
+            </textarea>
+          </label>
+
+          <button type="submit" class="submit write-us-submit">Отправить
+          </button>
         </form>
-        <button type="submit" name="button" class="button submit-button">Отправить</button>
-        <span class="modal-close">X</span>
       </section>
 
       <section class="modal modal-popup-map">
-        <h2 class="visually hidden">Всплывающая карта</h2>
-        <a href="#" class="popup-map"></a>
-      </section>
+        <h2 class="visually hidden">Всплывающая карта
+        </h2>
 
+        <a href="#" class="popup-map">
+        </a>
+      </section>
     </main>
 
-    <footer class="main-footer">
-      <ul class="footer-columns">
-        <li class="footer-column">
+    <footer class="main-footer container">
           <div class="footer-left-part">
             <a class="main-footer-logo">
-              <img src="#" alt="DEVICE" width="165" height="40">
+              <img src="http://placehold.it/165x40" alt="DEVICE" width="165" height="40">
             </a>
-            <p class="adress">г. Москва, ул. Строителей, 15</p>
+            <p class="adress">г. Москва, ул. Строителей, 15
+            </p>
           </div>
-        </li>
-        <li class="footer-column">
+          <!-- footer-left-part-end -->
+
           <div class="footer-middle-part">
-            <ul class="footer-lower-links">
+            <ul class="footer-service-links">
               <li>
-                <a href="#">Доставка</a></li>
+                <a href="#">Доставка
+                </a>
+              </li>
+
               <li>
-                <a href="#">Гарантия</a></li>
+                <a href="#">Гарантия
+                </a>
+              </li>
+
               <li>
-                <a href="#">Контакты</a></li>
-            </ul>
-            <ul class="social-buttons">
-              <li>
-                <a href="#" class="social-btn btn-fb">Facebook</a></li>
-              <li>
-                <a href="#" class="social-btn btn-in">Instagram</a></li>
-              <li>
-                <a href="#" class="social-btn btn-tw">Twitter</a></li>
+                <a href="#">Контакты
+                </a>
+              </li>
             </ul>
 
-          </div>
-        </li>
-        <li class="footer-column">
-          <div class="footer-right-part">
-            <ul class="footer-upper-links">
+            <ul class="social-buttons">
               <li>
-                <a href="#">Войти</a>
+                <a href="#" class="social-btn btn-fb">Facebook
+                </a>
               </li>
+
               <li>
-                <a href="#">Сравнить</a>
+                <a href="#" class="social-btn btn-insta">Instagram
+                </a>
               </li>
+
               <li>
-                <a href="#">Корзина</a>
-              </li>
-              <li class="authorized">
-                <a href="#">{username}</a>
-              </li>
-              <li class="authorized exit-button">
-                <a href="#">Выйти</a>
+                <a href="#" class="social-btn btn-tw">Twitter
+                </a>
               </li>
             </ul>
-            <p class="phone">Тел.: +7 (495) 495-95-95</p>
+          </div>
+          <!-- footer-middle-part-end -->
+
+          <div class="footer-right-part">
+            <ul class="footer-user-links">
+              <li>
+                <a href="#">Войти
+                </a>
+              </li>
+
+              <li>
+                <a href="#">Сравнить
+                </a>
+              </li>
+
+              <li>
+                <a href="#">Корзина
+                </a>
+              </li>
+            </ul>
+
+            <p class="phone">Тел.: +7 (495) 495-95-95
+            </p>
+
             <a href="#" class="developer-logo">
-              <img src="#" width="30" height="40" alt="HTML academy">
+              <img src="http://placehold.it/30x40" width="30" height="40" alt="HTML academy">
             </a>
           </div>
-        </li>
-      </ul>
+          <!-- footer-right-part-end -->
 
     </footer>
 
