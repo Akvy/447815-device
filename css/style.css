@@ -1,0 +1,26 @@
+body {
+  font-family: "Open Sans";
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 30px;
+  color: #464646;
+}
+
+h1 {
+  font-size: 47px;
+  line-height: auto;
+  color: black;
+  font-weight: bold;
+  /*font-family: "Gilgoy"; чтобы не забыть оставлю комментом этот шрифт)
+  Просто подключать их не доводилось никогда :)*/
+}
+
+h2 {
+  font-size: 16px;
+  /*на главной у заголовка второго уровня другой размер шрифта (как у загловка первого уровня).
+  Думаю потом просто класс добавить к ним и сделать нужный размер.*/
+  line-height: auto;
+  color: black;
+  font-weight: bold;
+/*font-family: "Gilgoy";*/
+}
