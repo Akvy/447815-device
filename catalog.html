@@ -13,7 +13,9 @@
         </a>
 
         <form class="search-form" action="index.html" method="get">
-          <input type="search" name="search-form">
+          <label class="visually-hidden">Окно поиска
+            <input type="search" name="search-form">
+          </label>
         </form>
 
         <ul class="header-service-links">
@@ -154,10 +156,10 @@
         </ul> <!-- end sorting-type -->
         <ul class="sorting-priority">
           <li class="sorting-item sorting-item-current">
-            <a href="#">Вверх</a>
+            <button type="button" class="button up-button">Вверх</button>
           </li>
           <li class="sorting-item">
-            <a href="#">Вниз</a>
+            <button type="button" class="button down-button">Вниз</button>
           </li>
         </ul> <!-- end sorting-priority -->
         <ul class="catalog-list">
@@ -171,8 +173,8 @@
             <b class="catalog-price">500 руб.</b>
 
             <div class="hover-info">
-              <a href="#" class="button hover-info-button">В корзину</a>
-              <a href="#" class="button hover-info-compare-button">Добавить к сравнению</a>
+              <button type="submit" class="button hover-info-button">В корзину</button>
+              <button type="submit" class="button hover-info-compare-button">Добавить к сравнению</button>
             </div>
           </li>
           <li class="catalog-item">
@@ -185,8 +187,8 @@
             <b class="catalog-price">1500 руб.</b>
 
             <div class="hover-info">
-              <a href="#" class="button hover-info-button">В корзину</a>
-              <a href="#" class="button hover-info-compare-button">Добавить к сравнению</a>
+              <button type="submit" class="button hover-info-button">В корзину</button>
+              <button type="submit" class="button hover-info-compare-button">Добавить к сравнению</button>
             </div>
           </li>
           <li class="catalog-item">
@@ -199,8 +201,8 @@
             <b class="catalog-price">2500 руб.</b>
 
             <div class="hover-info">
-              <a href="#" class="button hover-info-button">В корзину</a>
-              <a href="#" class="button hover-info-compare-button">Добавить к сравнению</a>
+              <button type="submit" class="button hover-info-button">В корзину</button>
+              <button type="submit" class="button hover-info-compare-button">Добавить к сравнению</button>
             </div>
           </li>
           <li class="catalog-item">
@@ -213,15 +215,15 @@
             <b class="catalog-price">4900 руб.</b>
 
             <div class="hover-info">
-              <a href="#" class="button hover-info-button">В корзину</a>
-              <a href="#" class="button hover-info-compare-button">Добавить к сравнению</a>
+              <button type="submit" class="button hover-info-button">В корзину</button>
+              <button type="submit" class="button hover-info-compare-button">Добавить к сравнению</button>
           </div>
           </li>
         </ul> <!-- end catalog-list -->
 
         <ul class="paginator">
           <li class="paginator-item paginator-prev">
-            <a href="#">Назад</a>
+            <button type="button" class="button paginator-prev">Назад</button>
           </li>
           <li class="paginator-item paginator-item-current">
             <a href="#">1</a>
@@ -233,10 +235,42 @@
             <a href="#">3</a>
           </li>
           <li class="paginator-item paginator-next">
-            <a href="#">Вперед</a>
+            <button type="button" class="button paginator-next">Вперед</button>
           </li>
         </ul> <!-- end paginator -->
       </section> <!-- end catalog -->
+
+      <section class="modal modal-write-us">
+        <button class="modal-close" type="button">Закрыть</button>
+
+        <h2 class="visually hidden">Форма обратной связи</h2>
+
+        <form class="write-us-form" action="index.html" method="post">
+          <label>Ваше имя:
+            <input type="text" name="name" placeholder="Представьтесь, пожалуйста">
+          </label>
+
+          <label>Ваш e-mail:
+            <input type="text" name="email" placeholder="Для отправки ответа">
+          </label>
+
+          <label>Текст письма:
+            <textarea name="customer-comments" placeholder="В свободной форме" rows="16" cols="76"></textarea>
+          </label>
+
+          <button type="submit" class="submit write-us-submit">Отправить</button>
+        </form>
+      </section> <!-- end modal modal-write-us -->
+
+      <section class="modal modal-popup-map">
+        <button class="modal-close" type="button">Закрыть</button>
+
+        <p>
+          <h2 class="visually hidden">Всплывающая карта</h2>
+
+          <img src="img/popup-map.jpg" class="popup-map" width="994" height="593" alt="Наш адрес: г. Москва, ул. Строителей, 15">
+        </p>
+      </section> <!-- end modal modal-popup-map -->
     </main>
 
     <footer class="main-footer">
