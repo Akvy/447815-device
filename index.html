@@ -12,11 +12,15 @@
           <p>DEVICE</p>
         </a>
 
-        <form class="search-form" action="index.html" method="get">
-          <label class="visually-hidden">Окно поиска
-            <input type="search" name="search-form">
-          </label>
-        </form>
+        <div class="search-area">
+          <form class="search-form" action="index.html" method="get">
+            <label class="visually-hidden">Окно поиска
+              <input type="search" name="search-form">
+            </label>
+          </form>
+
+          <button type="button" class="button search-button">Найти</button>
+        </div>
 
         <ul class="header-service-links">
           <li>
@@ -74,11 +78,17 @@
       <section class="promo-description">
         <h2 class="visually-hidden">Обзор самых популярных товаров</h2>
 
-        <div class="upper-slider-switch-buttons">
-          <button type="submit" class="button upper-slider-switch-button-1">1</button>
-          <button type="submit" class="button upper-slider-switch-button-2">2</button>
-          <button type="submit" class="button upper-slider-switch-button-3">3</button>
-        </div> <!-- end upper-slider-switch-buttons -->
+        <form class="upper-slider-switch" action="index.html" method="post">
+          <input type="radio" name="upper-toggle" id="upper-toggle-1" checked>
+          <input type="radio" name="upper-toggle" id="upper-toggle-2">
+          <input type="radio" name="upper-toggle" id="upper-toggle-3">
+        </form>
+
+        <div class="upper-toggles">
+          <label for="upper-toggle-1"></label>
+          <label for="upper-toggle-2"></label>
+          <label for="upper-toggle-3"></label>
+        </div>
 
         <ul class="upper-slider">
           <li class="slide-1">
@@ -210,11 +220,17 @@
       <section class="service">
         <h2 class="visually hidden">Преимущества</h2>
 
-        <div class="lower-slider-switch-buttons">
-          <button type="submit" class="button lower-slider-switch-button-1">1</button>
-          <button type="submit" class="button lower-slider-switch-button-2">2</button>
-          <button type="submit" class="button lower-slider-switch-button-3">3</button>
-        </div> <!-- end lower-slider-switch-buttons -->
+        <form class="lower-slider-switch" action="index.html" method="post">
+          <input type="radio" name="lower-toggle" id="lower-toggle-1" checked>
+          <input type="radio" name="lower-toggle" id="lower-toggle-2">
+          <input type="radio" name="lower-toggle" id="lower-toggle-3">
+        </form>
+
+        <div class="lower-toggles">
+          <label for="lower-toggle-1"></label>
+          <label for="lower-toggle-2"></label>
+          <label for="lower-toggle-3"></label>
+        </div>
 
         <ul class="lower-slider">
           <li class="lower-slide-1">
@@ -245,16 +261,24 @@
 
         <ul class="brands-list">
           <li class="brands-item">
-            <img src="img/logo-dji.png" alt="dji" width="140" height="90">
+            <a href="https://www.dji.com/">
+              <img src="img/logo-dji.png" alt="dji" width="140" height="90">
+            </a>
           </li>
           <li class="brands-item">
-            <img src="img/logo-sp-gadgets.jpg" alt="sp gadgets" width="260" height="45">
+            <a href="http://www.sp-gadgets.com/">
+              <img src="img/logo-sp-gadgets.jpg" alt="sp gadgets" width="260" height="45">
+            </a>
           </li>
           <li class="brands-item">
-            <img src="img/logo-gopro.png" alt="GoPro" width="205" height="60">
+            <a href="https://gopro.com/">
+              <img src="img/logo-gopro.png" alt="GoPro" width="205" height="60">
+            </a>
           </li>
           <li class="brands-item">
-            <img src="img/logo-vive.png" alt="ViVe" width="195" height="65">
+            <a href="https://www.vive.com/us/">
+              <img src="img/logo-vive.png" alt="ViVe" width="195" height="65">
+            </a>
           </li>
         </ul> <!-- end brands-list -->
       </section> <!-- end brands -->
@@ -312,11 +336,9 @@
       <section class="modal modal-popup-map">
         <button class="modal-close" type="button">Закрыть</button>
 
-        <p>
-          <h2 class="visually hidden">Всплывающая карта</h2>
+        <h2 class="visually hidden">Всплывающая карта</h2>
 
-          <img src="img/popup-map.jpg" class="popup-map" width="994" height="593" alt="Наш адрес: г. Москва, ул. Строителей, 15">
-        </p>
+        <img src="img/popup-map.jpg" class="popup-map" width="994" height="593" alt="Наш адрес: г. Москва, ул. Строителей, 15">
       </section> <!-- end modal modal-popup-map -->
     </main>
 
@@ -369,7 +391,7 @@
             <p class="phone">Тел.: +7 (495) 495-95-95</p>
 
             <a href="#" class="developer-logo">
-              <img src="img/logo-html.svg" width="27" height="35" logo-html-footer.svg alt="HTML academy">
+              <img src="img/logo-html.svg" width="27" height="35" alt="HTML academy">
             </a>
           </div> <!-- end footer-right-part -->
     </footer>

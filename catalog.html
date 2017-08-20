@@ -12,11 +12,15 @@
           <p>DEVICE</p>
         </a>
 
-        <form class="search-form" action="index.html" method="get">
-          <label class="visually-hidden">Окно поиска
-            <input type="search" name="search-form">
-          </label>
-        </form>
+        <div class="search-area">
+          <form class="search-form" action="index.html" method="get">
+            <label class="visually-hidden">Окно поиска
+              <input type="search" name="search-form">
+            </label>
+          </form>
+
+          <button type="button" class="button search-button">Найти</button>
+        </div>
 
         <ul class="header-service-links">
           <li>
@@ -156,10 +160,10 @@
         </ul> <!-- end sorting-type -->
         <ul class="sorting-priority">
           <li class="sorting-item sorting-item-current">
-            <button type="button" class="button up-button">Вверх</button>
+            <button type="button" class="button ascending">По возрастанию</button>
           </li>
           <li class="sorting-item">
-            <button type="button" class="button down-button">Вниз</button>
+            <button type="button" class="button descending">По убыванию</button>
           </li>
         </ul> <!-- end sorting-priority -->
         <ul class="catalog-list">
@@ -265,11 +269,9 @@
       <section class="modal modal-popup-map">
         <button class="modal-close" type="button">Закрыть</button>
 
-        <p>
-          <h2 class="visually hidden">Всплывающая карта</h2>
+        <h2 class="visually hidden">Всплывающая карта</h2>
 
-          <img src="img/popup-map.jpg" class="popup-map" width="994" height="593" alt="Наш адрес: г. Москва, ул. Строителей, 15">
-        </p>
+        <img src="img/popup-map.jpg" class="popup-map" width="994" height="593" alt="Наш адрес: г. Москва, ул. Строителей, 15">
       </section> <!-- end modal modal-popup-map -->
     </main>
 
