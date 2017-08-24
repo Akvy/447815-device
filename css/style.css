@@ -1,15 +1,31 @@
+/*== FONTS ==*/
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/gilroyextrabold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url("../fontsfonts/gilroylight.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*== GLOBAL ==*/
 
 body {
   margin: 0;
   padding: 0;
 
-  font-family: "gilroyextrabold", "gilroylight", "open_sanslight", "open_sansregular", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: bold;
   color: #000000;
-  letter-spacing: 0.01em;
+  /*letter-spacing: 0.01em;*/
 
   background-color: #ffffff;
 }
@@ -19,7 +35,7 @@ a {
 }
 
 .button {
-  font-family: "gilroyextrabold";
+  font-family: "Gilroy";
   font-size: 18px;
   font-weight: bold;
   color: #000000;
@@ -41,42 +57,12 @@ a {
   opacity: 0.3;
 }
 
-/*== FONTS ==*/
-
-@font-face {
-    font-family: 'gilroyextrabold';
-    src: url('../fonts/gilroyextrabold/gilroyextrabold-webfont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'gilroylight';
-    src: url('../fonts/gilroylight/gilroylight-webfont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sanslight';
-    src: url('../fonts/opensans-light/opensans-light-webfont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sansregular';
-    src: url('../fonts/opensans-regular/opensans-regular-webfont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /*== MODAL-WRITE-US == */
 
 .write-us-form label {
+  font-family: "Gilroy";
   font-size: 18px;
   line-height: 18px;
-  letter-spacing: 0;
 }
 
 .write-us-form input,
@@ -98,9 +84,7 @@ a {
   border: 3px solid #f0c52e;
 }
 
-.write-us-form input:invalid {/*Начал было гуглить как проверить инвалид статус,
-  но времени уже много, а хочется доделать :) Так что расскажи плиз ну или где про это почитать )*/
-
+.write-us-form input:invalid {
   background-color: #edb5b5;
 
   opacity: 0.5;
@@ -108,19 +92,16 @@ a {
 
 .write-us-form input[placeholder],
 .write-us-form textarea[placeholder] {
-  font-family: "open_sansregular";
   font-size: 14px;
   line-height: 18px;
   color: #464646;
   opacity: 0.4;
-  letter-spacing: 0;
 }
 
 .write-us-form input[placeholder]:focus,
 .write-us-form textarea[placeholder]:focus {
   opacity: 1;
 }
-
 
 /*== HEADER == */
 
@@ -129,11 +110,10 @@ a {
 }
 
 .search-form input[placeholder] {
-  font-family: "open_sanslight";
   font-size: 15px;
   line-height: 36px;
   color: #000000;
-  text-transform: none;
+  font-weight: 300;
   opacity: 0.3;
 
   background-color: inherit;
@@ -151,12 +131,12 @@ a {
 }
 
 .search-button {
-  font-family: "open_sanslight";
   font-size: 15px;
   line-height: 36px;
   color: #000000;
   text-transform: none;
-  letter-spacing: 0.01em;
+  font-weight: 300;
+  /*letter-spacing: 0.01em;*/
 
   background-color: #f7e296;
   border: 2px solid #000000;
@@ -173,6 +153,7 @@ a {
 }
 
 .main-header-logo p {
+  font-family: "Gilroy";
   font-size: 48px;
   color: #000000;
 }
@@ -183,7 +164,8 @@ a {
   list-style: none;
 }
 
-.header-service-links a {
+.header-service-link {
+  font-family: "Gilroy";
   font-size: 18px;
   color: #000000;
   text-transform: uppercase;
@@ -192,12 +174,11 @@ a {
 
 .header-user-links a,
 .header-dropping-list a {
-  font-family: "open_sanslight";
-  font-size: 15px;
   line-height: 36px;
   color: #000000;
   text-transform: none;
-  letter-spacing: 0.01em;
+  font-weight: 300;
+  /*letter-spacing: 0;*/
 }
 
 .header-user-links a:hover,
@@ -229,6 +210,7 @@ a {
 }
 
 .main-footer-logo p {
+  font-family: "Gilroy";
   font-size: 48px;
   color: #ffc600;
 }
@@ -240,10 +222,9 @@ a {
 }
 
 .footer-user-links a {
-  font-family: "open_sanslight";
-  font-size: 15px;
   line-height: 36px;
   color: #ffffff;
+  font-weight: 300;
   opacity: 0.7;
 }
 
@@ -257,14 +238,13 @@ a {
 
 .phone,
 .adress {
-  font-family: "open_sanslight";
-  font-size: 15px;
   line-height: 30px;
   color: #ffffff;
-  letter-spacing: 0em;
+  font-weight: 300;
 }
 
 .footer-service-links a {
+  font-family: "Gilroy";
   font-size: 18px;
   color: #ffffff;
   text-transform: uppercase;
@@ -285,8 +265,6 @@ a {
   color: #ffffff;
 }
 
-/*svg-фигуру и социальные кнопки пока не трогаю, т.к. не уверен что это нужно сейчас делать :)*/
-
 /*== INDEX [PAGE] == */
 
 /*== PROMO-DESCRIPTION ==*/
@@ -296,10 +274,12 @@ a {
 }
 
 .upper-slider b {
+  font-family: "Gilroy";
   font-size: 47px;
 }
 
 .description-container .slide-number {
+  font-family: "Gilroy";
   font-size: 179.2px;
   color: #ffffff;
 
@@ -307,22 +287,22 @@ a {
 }
 
 .description-container .item-description {
-  font-family: "open_sanslight";
-  font-size: 15px;
   line-height: 30px;
   color: #464646;
+  font-weight: 300;
 }
 
 .slide-table th {
-  font-family: "gilroylight";
+  font-family: "Gilroy";
   font-size: 36px;
+  font-weight: 400;
 }
 
 .slide-table td {
-  font-family: "open_sanslight";
   font-size: 13px;
   line-height: 20px;
   color: #464646;
+  font-weight: 300;
 }
 
 /*== SHOP-CATEGORY ==*/
@@ -332,6 +312,7 @@ a {
 }
 
 .item-group-container a {
+  font-family: "Gilroy";
   font-size: 18px;
   color: #000000;
 }
@@ -357,14 +338,14 @@ a {
 }
 
 .lower-slide-description h3 {
+  font-family: "Gilroy";
   font-size: 47px;
 }
 
 .lower-slide-description .advantage-description {
-  font-family: "open_sanslight";
-  font-size: 15px;
   line-height: 30px;
   color: #464646;
+  font-weight: 300;
 }
 
 /*== BRANDS == */
@@ -376,45 +357,41 @@ a {
 .brands-item {
   opacity: 0.2;
 }
-/*При наведении пока не стал резать картинки, но если скажешь можно сделаю)
-Я так понимаю тут нужно сделать спрайт и потом его двигать, вместо 4-х картинок?*/
 
 /*== ABOUT US ==*/
 
 .about-us h2 {
+  font-family: "Gilroy";
   font-size: 47px;
 }
 
 .about-us p {
-  font-family: "open_sanslight";
-  font-size: 15px;
   line-height: 30px;
   color: #464646;
-  letter-spacing: 0;
+  font-weight: 300;
 }
 
-.about-us-partners { /*Пока их убрал, но нужно будет подобрать и сделать :) Если уже можно, скажи плиз ) */
+.about-us-partners { /*Пока их убрал, но нужно будет подобрать и сделать  */
   list-style: none;
 }
 
 .about-us-partners li {
+  font-family: "Gilroy";
   font-size: 16px;
   line-height: 40px;
-  letter-spacing: 0;
 }
 
 /*== CONTACTS == */
 
 .contacts h2 {
+  font-family: "Gilroy";
   font-size: 47px;
 }
 
 .contacts p {
-  font-family: "open_sanslight";
-  font-size: 15px;
   line-height: 30px;
   color: #464646;
-  letter-spacing: 0;
+  font-weight: 300;
 }
 
 /*== CATALOG [PAGE] ==*/
@@ -422,6 +399,7 @@ a {
 /*== CATALOG. MAIN ==*/
 
 .inner-page-header {
+  font-family: "Gilroy";
   font-size: 47px;
 }
 
@@ -431,12 +409,12 @@ a {
 
 .breadcrumbs a,
 .breadcrumbs-current {
-  font-family: "open_sanslight";
   font-size: 14px;
   line-height: 36px;
   color: #000000;
-  letter-spacing: 0;
+  font-weight: 300;
   opacity: 0.3;
+
 }
 
 .breadcrumbs a:hover {
@@ -454,6 +432,7 @@ a {
 }
 
 .filters h2 {
+  font-family: "Gilroy";
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -465,7 +444,9 @@ a {
   border: none;
 }
 
-.filters-form label {
+.filters-form .range-name,
+.filters-form legend {
+  font-family: "Gilroy";
   font-size: 16px;
 }
 
@@ -475,14 +456,16 @@ a {
 
 .color-list label,
 .filter-bluetooth label {
-  font-family: "open_sanslight";
+  font-family: "Open Sans";
   font-size: 14px;
   line-height: 40px;
+  font-weight: 300;
 }
 
 /*== CATALOG == */
 
 .catalog h2 {
+  font-family: "Gilroy";
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -496,11 +479,10 @@ a {
 }
 
 .sorting-type-item a {
-  font-family: "open_sanslight";
   font-size: 14px;
   line-height: 18px;
   color: #000000;
-  letter-spacing: 0;
+  font-weight: 300;
   opacity: 0.3;
 }
 
@@ -544,20 +526,22 @@ a {
 }
 
 .catalog-item a {
+  font-family: "Gilroy";
   font-size: 18px;
   color: #000000;
 }
 
 .catalog-item .catalog-price {
-  font-family: "gilroylight";
+  font-family: "Gilroy";
   font-size: 16px;
   color: #464646;
+  font-weight: 400;
 }
 
 .hover-info-compare-button {
-  font-family: "open_sanslight";
   font-size: 13px;
   line-height: 36px;
+  font-weight: 300;
   opacity: 0.7;
 
   background-color: #eeeeee;
@@ -587,7 +571,7 @@ a {
 
 .paginator-item a,
 .paginator-item button {
-  font-family: "gilroyextrabold";
+  font-family: "Gilroy";
   font-size: 16px;
   color: #000000;
   letter-spacing: 0.2em;
