@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -14,12 +15,13 @@
 
         <form class="search-form" action="index.html" method="get">
           <label class="visually-hidden">Окно поиска
-            <input type="search" name="search-form">
+            <input type="search" name="search-form" placeholder="Поиск по сайту">
           </label>
         </form>
 
-        <button type="button" class="button search-button">Найти</button>
-
+        <button type="button" class="button search-button">
+          <span>Найти</span>
+        </button>
 
         <ul class="header-service-links">
           <li>
@@ -56,19 +58,18 @@
             <a href="#">Контакты</a>
           </li>
         </ul> <!-- end header-service-links -->
+        <ul class="header-user-links">
+          <li>
+            <a href="#">Войти</a>
+          </li>
+          <li>
+            <a href="#">Сравнить</a>
+          </li>
+          <li>
+            <a href="#">Корзина</a>
+          </li>
+        </ul> <!-- end header-user-links -->
       </nav> <!-- end main-nav -->
-
-      <ul class="header-user-links">
-        <li>
-          <a href="#">Войти</a>
-        </li>
-        <li>
-          <a href="#">Сравнить</a>
-        </li>
-        <li>
-          <a href="#">Корзина</a>
-        </li>
-      </ul> <!-- end header-user-links -->
     </header>
 
     <main>
@@ -98,7 +99,9 @@
 
               <p class="item-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
 
-              <a class="button slide-button" href="#">Подробнее</a>
+              <a class="button slide-button" href="#">
+                <span>Подробнее</span>
+              </a>
 
               <table class="slide-table">
                 <tr>
@@ -124,7 +127,9 @@
 
               <p class="item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
 
-              <a class="button slide-button" href="#">Подробнее</a>
+              <a class="button slide-button" href="#">
+                <span>Подробнее</span>
+              </a>
 
               <table class="slide-table">
                 <tr>
@@ -147,7 +152,9 @@
 
               <p class="item-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
 
-              <a class="button slide-button" href="#">Подробнее</a>
+              <a class="button slide-button" href="#">
+                <span>Подробнее</span>
+              </a>
 
               <table class="slide-table">
                 <tr>
@@ -169,7 +176,7 @@
 
         <ul class="item-groups">
           <li class="item-group">
-            <div class="item-group-cotainer">
+            <div class="item-group-container">
               <a href="#">
                 <!-- размер квадратика - 160x160 -->
                 <h3 class="item-class-description">Виртуальная реальность</h3>
@@ -177,35 +184,35 @@
             </div>
           </li>
           <li class="item-group">
-            <div class="item-group-cotainer">
+            <div class="item-group-container">
               <a href="#">
                 <h3 class="item-class-description">Моноподы для селфи</h3>
               </a>
             </div>
           </li>
           <li class="item-group">
-            <div class="item-group-cotainer">
+            <div class="item-group-container">
               <a href="#">
                 <h3 class="item-class-description">Экшн-камеры</h3>
               </a>
             </div>
           </li>
           <li class="item-group">
-            <div class="item-group-cotainer">
+            <div class="item-group-container">
               <a href="#">
                 <h3 class="item-class-description">Фитнес-браслеты</h3>
               </a>
             </div>
           </li>
           <li class="item-group">
-            <div class="item-group-cotainer">
+            <div class="item-group-container">
               <a href="#">
                 <h3 class="item-class-description">Умные часы</h3>
               </a>
             </div>
           </li>
           <li class="item-group">
-            <div class="item-group-cotainer">
+            <div class="item-group-container">
               <a href="#">
                 <h3 class="item-class-description">Квадрокоптеры</h3>
               </a>
@@ -222,9 +229,9 @@
         <input type="radio" name="lower-toggle" id="lower-toggle-3">
 
         <div class="lower-toggles">
-          <label for="lower-toggle-1"></label>
-          <label for="lower-toggle-2"></label>
-          <label for="lower-toggle-3"></label>
+          <label class="button lower-toggle-button" for="lower-toggle-1">Доставка</label>
+          <label class="button lower-toggle-button" for="lower-toggle-2">Кредит</label>
+          <label class="button lower-toggle-button" for="lower-toggle-3">Гарантия</label>
         </div>
 
         <ul class="lower-slider">
@@ -291,7 +298,9 @@
             <li>ЖелДорЭкспедиция</li>
           </ul>
 
-          <a href="#" class="button about-us-button">Подробнее о нас</a>
+          <a href="#" class="button about-us-button">
+            <span>Подробнее о нас</span>
+          </a>
         </section> <!-- end about-us -->
 
         <section class="contacts">
@@ -302,7 +311,9 @@
           <a href="#" class="map">
             <img src="img/contacts-map.jpg" alt="Карта с адресом" width="560" height="230">
           </a>
-          <a href="#" class="button contacts-button">Напишите нам</a>
+          <a href="#" class="button contacts-button">
+            <span>Напишите нам</span>
+          </a>
         </section> <!-- end contacts -->
       </section> <!-- end reference-block -->
 
@@ -324,7 +335,9 @@
             <textarea name="customer-comments" placeholder="В свободной форме" rows="16" cols="76"></textarea>
           </label>
 
-          <button type="submit" class="submit write-us-submit">Отправить</button>
+          <button type="submit" class="button write-us-submit">
+            <span>Отправить</span>
+          </button>
         </form>
       </section> <!-- end modal modal-write-us -->
 

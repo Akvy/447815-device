@@ -3,22 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог - Магазин Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
       <nav class="main-nav">
         <a href="index.html" class="main-header-logo">
-          <p>DEVICE</p>
+          <p class="inner">DEVICE</p>
         </a>
 
         <form class="search-form" action="index.html" method="get">
           <label class="visually-hidden">Окно поиска
-            <input type="search" name="search-form">
+            <input type="search" name="search-form" placeholder="Поиск по сайту">
           </label>
         </form>
 
-        <button type="button" class="button search-button">Найти</button>
+        <button type="button" class="button search-button">
+          <span>Найти</span>
+        </button>
 
         <ul class="header-service-links">
           <li>
@@ -55,26 +58,25 @@
             <a href="#">Контакты</a>
           </li>
         </ul> <!-- end header-service-links -->
+        <ul class="header-user-links">
+          <li>
+            <a href="#">Сравнить</a>
+          </li>
+          <li>
+            <a href="#">Корзина</a>
+          </li>
+          <li class="login login-header">
+            <a href="#">Валентин Петухов</a>
+          </li>
+          <li class="login">
+            <a href="#">Выйти</a>
+          </li>
+        </ul> <!-- end header-user-links -->
       </nav>
-
-      <ul class="header-user-links">
-        <li>
-          <a href="#">Сравнить</a>
-        </li>
-        <li>
-          <a href="#">Корзина</a>
-        </li>
-        <li class="login login-header">
-          <a href="#">Валентин Петухов</a>
-        </li>
-        <li class="login">
-          <a href="#">Выйти</a>
-        </li>
-      </ul> <!-- end header-user-links -->
     </header>
 
     <main>
-      <h1>Моноподы для селфи</h1>
+      <h1 class="inner-page-header">Моноподы для селфи</h1>
 
       <ul class="breadcrumbs">
         <li>
@@ -83,7 +85,7 @@
         <li>
           <a href="#">Каталог товаров</a>
         </li>
-        <li class="breadcrums-current">Моноподы для селфи</li>
+        <li class="breadcrumbs-current">Моноподы для селфи</li>
       </ul> <!-- end breadcrumbs -->
 
       <section class="filters">
@@ -137,13 +139,14 @@
             </label>
           </fieldset> <!-- end filter-bluetooth -->
 
-          <button type="submit" class="submit filters-submit">Показать
+          <button type="submit" class="button filters-submit">
+            <span>Показать</span>
           </button>
         </form>
       </section> <!-- end filters -->
 
       <section class="catalog">
-        <h2>Сортировака:</h2>
+        <h2>Сортировка:</h2>
 
         <ul class="sorting-type">
           <li class="sorting-type-item sorting-item-current">
@@ -158,10 +161,10 @@
         </ul> <!-- end sorting-type -->
         <ul class="sorting-priority">
           <li class="sorting-item sorting-item-current">
-            <button type="button" class="button ascending">По возрастанию</button>
+            <button type="button" class="ascending">По возрастанию</button>
           </li>
           <li class="sorting-item">
-            <button type="button" class="button descending">По убыванию</button>
+            <button type="button" class="descending">По убыванию</button>
           </li>
         </ul> <!-- end sorting-priority -->
         <ul class="catalog-list">
@@ -175,8 +178,12 @@
             <b class="catalog-price">500 руб.</b>
 
             <div class="hover-info">
-              <button type="submit" class="button hover-info-button">В корзину</button>
-              <button type="submit" class="button hover-info-compare-button">Добавить к сравнению</button>
+              <button type="submit" class="button hover-info-button">
+                <span>В корзину</span>
+              </button>
+              <button type="submit" class="hover-info-compare-button">
+                <span>Добавить к сравнению</span>
+              </button>
             </div>
           </li>
           <li class="catalog-item">
@@ -186,11 +193,15 @@
               <a href="#">Профессиональная селфи-палка</a>
             </h3>
 
-            <b class="catalog-price">1500 руб.</b>
+            <b class="catalog-price">1 500 руб.</b>
 
             <div class="hover-info">
-              <button type="submit" class="button hover-info-button">В корзину</button>
-              <button type="submit" class="button hover-info-compare-button">Добавить к сравнению</button>
+              <button type="submit" class="button hover-info-button">
+                <span>В корзину</span>
+              </button>
+              <button type="submit" class="hover-info-compare-button">
+                <span>Добавить к сравнению</span>
+              </button>
             </div>
           </li>
           <li class="catalog-item">
@@ -200,11 +211,15 @@
               <a href="#">Непотопляемая селфи-палка</a>
             </h3>
 
-            <b class="catalog-price">2500 руб.</b>
+            <b class="catalog-price">2 500 руб.</b>
 
             <div class="hover-info">
-              <button type="submit" class="button hover-info-button">В корзину</button>
-              <button type="submit" class="button hover-info-compare-button">Добавить к сравнению</button>
+              <button type="submit" class="button hover-info-button">
+                <span>В корзину</span>
+              </button>
+              <button type="submit" class="hover-info-compare-button">
+                <span>Добавить к сравнению</span>
+              </button>
             </div>
           </li>
           <li class="catalog-item">
@@ -214,18 +229,24 @@
               <a href="#">Селфи-палка «Следуй за мной»</a>
             </h3>
 
-            <b class="catalog-price">4900 руб.</b>
+            <b class="catalog-price">4 900 руб.</b>
 
             <div class="hover-info">
-              <button type="submit" class="button hover-info-button">В корзину</button>
-              <button type="submit" class="button hover-info-compare-button">Добавить к сравнению</button>
+              <button type="submit" class="button hover-info-button">
+                <span>В корзину</span>
+              </button>
+              <button type="submit" class="hover-info-compare-button">
+                <span>Добавить к сравнению</span>
+              </button>
           </div>
           </li>
         </ul> <!-- end catalog-list -->
 
         <ul class="paginator">
           <li class="paginator-item paginator-prev">
-            <button type="button" class="button paginator-prev">Назад</button>
+            <button type="button" class="paginator-prev">
+              <span>Назад</span>
+            </button>
           </li>
           <li class="paginator-item paginator-item-current">
             <a href="#">1</a>
@@ -237,7 +258,8 @@
             <a href="#">3</a>
           </li>
           <li class="paginator-item paginator-next">
-            <button type="button" class="button paginator-next">Вперед</button>
+            <button type="button" class="paginator-next">
+              <span>Вперед</span></button>
           </li>
         </ul> <!-- end paginator -->
       </section> <!-- end catalog -->
@@ -260,7 +282,7 @@
             <textarea name="customer-comments" placeholder="В свободной форме" rows="16" cols="76"></textarea>
           </label>
 
-          <button type="submit" class="submit write-us-submit">Отправить</button>
+          <button type="submit" class="button write-us-submit">Отправить</button>
         </form>
       </section> <!-- end modal modal-write-us -->
 

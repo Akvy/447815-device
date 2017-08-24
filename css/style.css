@@ -1,26 +1,612 @@
+/*== GLOBAL ==*/
+
 body {
-  font-family: "Open Sans";
-  font-weight: normal;
+  margin: 0;
+  padding: 0;
+
+  font-family: "gilroyextrabold", "gilroylight", "open_sanslight", "open_sansregular", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #000000;
+  letter-spacing: 0.01em;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  font-family: "gilroyextrabold";
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  background-color: #f0c52e;
+  border: none;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: #f0c52e;
+}
+
+.button:active > span {
+  opacity: 0.3;
+}
+
+/*== FONTS ==*/
+
+@font-face {
+    font-family: 'gilroyextrabold';
+    src: url('../fonts/gilroyextrabold/gilroyextrabold-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroylight';
+    src: url('../fonts/gilroylight/gilroylight-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../fonts/opensans-light/opensans-light-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/opensans-regular/opensans-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*== MODAL-WRITE-US == */
+
+.write-us-form label {
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.write-us-form input,
+.write-us-form textarea {
+  background-color: #e5e5e5;
+  opacity: 0.5;
+}
+
+.write-us-form input:hover,
+.write-us-form textarea:hover {
+  opacity: 0.8;
+}
+
+.write-us-form input:focus,
+.write-us-form textarea:focus {
+  background-color: #ffffff;
+  opacity: 0.5;
+
+  border: 3px solid #f0c52e;
+}
+
+.write-us-form input:invalid {/*Начал было гуглить как проверить инвалид статус,
+  но времени уже много, а хочется доделать :) Так что расскажи плиз ну или где про это почитать )*/
+
+  background-color: #edb5b5;
+
+  opacity: 0.5;
+}
+
+.write-us-form input[placeholder],
+.write-us-form textarea[placeholder] {
+  font-family: "open_sansregular";
+  font-size: 14px;
+  line-height: 18px;
+  color: #464646;
+  opacity: 0.4;
+  letter-spacing: 0;
+}
+
+.write-us-form input[placeholder]:focus,
+.write-us-form textarea[placeholder]:focus {
+  opacity: 1;
+}
+
+
+/*== HEADER == */
+
+.main-nav {
+  background-color: #f7e296;
+}
+
+.search-form input[placeholder] {
+  font-family: "open_sanslight";
+  font-size: 15px;
+  line-height: 36px;
+  color: #000000;
+  text-transform: none;
+  opacity: 0.3;
+
+  background-color: inherit;
+  border: none;
+}
+
+.search-form input[placeholder]:hover {
+  opacity: 0.6;
+}
+
+.search-form input[placeholder]:focus {
+  opacity: 1;
+
+  border-bottom: 2px solid #000000;
+}
+
+.search-button {
+  font-family: "open_sanslight";
+  font-size: 15px;
+  line-height: 36px;
+  color: #000000;
+  text-transform: none;
+  letter-spacing: 0.01em;
+
+  background-color: #f7e296;
+  border: 2px solid #000000;
+}
+
+.search-button:hover {
+  color: #ffffff;
+
+  background-color: #000000;
+}
+
+.search-button:active > span {
+  opacity: 0.3;
+}
+
+.main-header-logo p {
+  font-size: 48px;
+  color: #000000;
+}
+
+.header-user-links,
+.header-service-links,
+.header-dropping-list {
+  list-style: none;
+}
+
+.header-service-links a {
+  font-size: 18px;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.header-user-links a,
+.header-dropping-list a {
+  font-family: "open_sanslight";
+  font-size: 15px;
+  line-height: 36px;
+  color: #000000;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.header-user-links a:hover,
+.header-dropping-list a:hover,
+.header-service-links a:hover {
+  opacity: 0.6;
+}
+
+.header-user-links a:active,
+.header-dropping-list a:active,
+.header-service-links a:active {
+  opacity: 0.3;
+}
+
+/*== HEADER INNER PAGE ==*/
+
+ .main-header-logo .inner:hover {
+  opacity: 0.6;
+}
+
+.main-header-logo .inner:active {
+ opacity: 0.3;
+}
+
+/*== FOOTER ==*/
+
+.main-footer {
+  background-color: #464646;
+}
+
+.main-footer-logo p {
+  font-size: 48px;
+  color: #ffc600;
+}
+
+.footer-service-links,
+.social-buttons,
+.footer-user-links {
+  list-style: none;
+}
+
+.footer-user-links a {
+  font-family: "open_sanslight";
+  font-size: 15px;
+  line-height: 36px;
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.footer-user-links a:hover {
+  opacity: 1;
+}
+
+.footer-user-links a:active {
+  opacity: 0.3;
+}
+
+.phone,
+.adress {
+  font-family: "open_sanslight";
+  font-size: 15px;
+  line-height: 30px;
+  color: #ffffff;
+  letter-spacing: 0em;
+}
+
+.footer-service-links a {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.main-footer-logo p:hover,
+.footer-service-links a:hover {
+  opacity: 0.6;
+}
+
+.main-footer-logo p:active,
+.footer-service-links a:active {
+  opacity: 0.3;
+}
+
+.social-buttons .social-btn {
+  color: #ffffff;
+}
+
+/*svg-фигуру и социальные кнопки пока не трогаю, т.к. не уверен что это нужно сейчас делать :)*/
+
+/*== INDEX [PAGE] == */
+
+/*== PROMO-DESCRIPTION ==*/
+
+.upper-slider li {
+  list-style: none;
+}
+
+.upper-slider b {
+  font-size: 47px;
+}
+
+.description-container .slide-number {
+  font-size: 179.2px;
+  color: #ffffff;
+
+  background-color: #f7e296;
+}
+
+.description-container .item-description {
+  font-family: "open_sanslight";
   font-size: 15px;
   line-height: 30px;
   color: #464646;
 }
 
-h1 {
-  font-size: 47px;
-  line-height: auto;
-  color: black;
-  font-weight: bold;
-  /*font-family: "Gilgoy"; чтобы не забыть оставлю комментом этот шрифт)
-  Просто подключать их не доводилось никогда :)*/
+.slide-table th {
+  font-family: "gilroylight";
+  font-size: 36px;
 }
 
-h2 {
+.slide-table td {
+  font-family: "open_sanslight";
+  font-size: 13px;
+  line-height: 20px;
+  color: #464646;
+}
+
+/*== SHOP-CATEGORY ==*/
+
+.item-groups {
+  list-style: none;
+}
+
+.item-group-container a {
+  font-size: 18px;
+  color: #000000;
+}
+
+.item-group-container:active {
+  opacity: 0.3;
+}
+
+/*== SERVICE ==*/
+
+.service {
+  background-color: #e5e5e5;
+}
+
+.lower-slider {
+  list-style: none;
+}
+
+.lower-toggles .lower-toggle-button:active {
+  color: #f7e184;
+
+  background-color: #000000;
+}
+
+.lower-slide-description h3 {
+  font-size: 47px;
+}
+
+.lower-slide-description .advantage-description {
+  font-family: "open_sanslight";
+  font-size: 15px;
+  line-height: 30px;
+  color: #464646;
+}
+
+/*== BRANDS == */
+
+.brands-list {
+  list-style: none;
+}
+
+.brands-item {
+  opacity: 0.2;
+}
+/*При наведении пока не стал резать картинки, но если скажешь можно сделаю)
+Я так понимаю тут нужно сделать спрайт и потом его двигать, вместо 4-х картинок?*/
+
+/*== ABOUT US ==*/
+
+.about-us h2 {
+  font-size: 47px;
+}
+
+.about-us p {
+  font-family: "open_sanslight";
+  font-size: 15px;
+  line-height: 30px;
+  color: #464646;
+  letter-spacing: 0;
+}
+
+.about-us-partners { /*Пока их убрал, но нужно будет подобрать и сделать :) Если уже можно, скажи плиз ) */
+  list-style: none;
+}
+
+.about-us-partners li {
   font-size: 16px;
-  /*на главной у заголовка второго уровня другой размер шрифта (как у загловка первого уровня).
-  Думаю потом просто класс добавить к ним и сделать нужный размер.*/
-  line-height: auto;
-  color: black;
-  font-weight: bold;
-/*font-family: "Gilgoy";*/
+  line-height: 40px;
+  letter-spacing: 0;
+}
+
+/*== CONTACTS == */
+
+.contacts h2 {
+  font-size: 47px;
+}
+
+.contacts p {
+  font-family: "open_sanslight";
+  font-size: 15px;
+  line-height: 30px;
+  color: #464646;
+  letter-spacing: 0;
+}
+
+/*== CATALOG [PAGE] ==*/
+
+/*== CATALOG. MAIN ==*/
+
+.inner-page-header {
+  font-size: 47px;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a,
+.breadcrumbs-current {
+  font-family: "open_sanslight";
+  font-size: 14px;
+  line-height: 36px;
+  color: #000000;
+  letter-spacing: 0;
+  opacity: 0.3;
+}
+
+.breadcrumbs a:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs a:active {
+  opacity: 0.1;
+}
+
+/*== FILTERS == */
+
+.filters{
+  background-color: #efefef;
+}
+
+.filters h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  background-color: #dbdbdb;
+}
+
+.filters-form fieldset {
+  border: none;
+}
+
+.filters-form label {
+  font-size: 16px;
+}
+
+.color-list {
+  list-style: none;
+}
+
+.color-list label,
+.filter-bluetooth label {
+  font-family: "open_sanslight";
+  font-size: 14px;
+  line-height: 40px;
+}
+
+/*== CATALOG == */
+
+.catalog h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  background-color: #ebebeb;
+}
+
+.sorting-type,
+.sorting-priority {
+  list-style: none;
+}
+
+.sorting-type-item a {
+  font-family: "open_sanslight";
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  letter-spacing: 0;
+  opacity: 0.3;
+}
+
+.sorting-type-item a:hover {
+  opacity: 0.6;
+}
+
+.sorting-type-item a:active {
+  opacity: 1;
+}
+
+.sorting-item-current a {
+  opacity: 1;
+}
+
+.sorting-item-current .ascending {
+  opacity: 1;
+}
+
+.sorting-item-current .ascending:hover {
+  opacity: 0.4;
+}
+
+.sorting-item .descending {
+  opacity: 0.2;
+}
+
+.sorting-item .descending:hover {
+  opacity: 0.4;
+}
+
+.sorting-item .descending:active {
+  opacity: 1;
+}
+
+.catalog-list {
+  list-style: none;
+}
+.catalog-item img:hover {
+  opacity: 0.7;
+}
+
+.catalog-item a {
+  font-size: 18px;
+  color: #000000;
+}
+
+.catalog-item .catalog-price {
+  font-family: "gilroylight";
+  font-size: 16px;
+  color: #464646;
+}
+
+.hover-info-compare-button {
+  font-family: "open_sanslight";
+  font-size: 13px;
+  line-height: 36px;
+  opacity: 0.7;
+
+  background-color: #eeeeee;
+  border: none;
+}
+
+.hover-info-compare-button > span {
+  opacity: 0.5;
+}
+
+
+.hover-info-compare-button:hover > span {
+  opacity: 1;
+}
+
+.hover-info-compare-button:active > span {
+  opacity: 0.2;
+}
+
+.paginator {
+  list-style: none;
+}
+
+.paginator-item {
+    background-color: #ebebeb;
+}
+
+.paginator-item a,
+.paginator-item button {
+  font-family: "gilroyextrabold";
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.2em;
+
+  background-color: #ebebeb;
+  border: none;
+}
+.paginator-item a {
+  opacity: 0.3;
+}
+
+.paginator-item-current a {
+  opacity: 1;
+}
+
+.paginator-item button:hover {
+  background-color: #d9d9d9;
+}
+
+.paginator-item button:active {
+  opacity: 0.08;
 }
