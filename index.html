@@ -8,75 +8,80 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header container">
       <nav class="main-nav">
         <a class="main-header-logo">
           <p>DEVICE</p>
         </a>
 
-        <form class="search-form" action="index.html" method="get">
-          <label class="visually-hidden">Окно поиска
-            <input type="search" name="search-form" placeholder="Поиск по сайту">
-          </label>
-        </form>
+        <div class="main-header-columns">
+          <div class="main-header-upper-container">
+            <form class="search-form" action="index.html" method="get">
+              <label class="visually-hidden">Окно поиска
+                <input type="search" name="search-form" placeholder="Поиск по сайту">
+              </label>
+            </form>
 
-        <button type="button" class="button search-button">
-          <span>Найти</span>
-        </button>
+            <button type="button" class="button search-button">
+              <span>Найти</span>
+            </button>
 
-        <ul class="header-service-links">
-          <li>
-            <a class="header-service-link" href="#">Каталог товаров</a>
+            <ul class="header-user-links">
+              <li>
+                <a href="#">Войти</a>
+              </li>
+              <li>
+                <a href="#">Сравнить</a>
+              </li>
+              <li>
+                <a href="#">Корзина</a>
+              </li>
+            </ul> <!-- end header-user-links -->
+          </div>
 
-            <ul class="header-dropping-list">
-              <li>
-                <a href="#">Виртуальная реальность</a>
-              </li>
-              <li>
-                <a href="#">Моноподы для селфи</a>
-              </li>
-              <li>
-                <a href="#">Экшн-камеры</a>
-              </li>
-              <li>
-                <a href="#">Фитнес-браслеты</a>
-              </li>
-              <li>
-                <a href="#">Умные часы</a>
-              </li>
-              <li>
-                <a href="#">Квадрокоптеры</a>
-              </li>
-            </ul> <!-- end header-dropping-list -->
-          </li>
-          <li>
-            <a class="header-service-link" href="#">Доставка</a>
-          </li>
-          <li>
-            <a class="header-service-link" href="#">Гарантия</a>
-          </li>
-          <li>
-            <a class="header-service-link" href="#">Контакты</a>
-          </li>
-        </ul> <!-- end header-service-links -->
-        <ul class="header-user-links">
-          <li>
-            <a href="#">Войти</a>
-          </li>
-          <li>
-            <a href="#">Сравнить</a>
-          </li>
-          <li>
-            <a href="#">Корзина</a>
-          </li>
-        </ul> <!-- end header-user-links -->
+          <ul class="header-service-links">
+            <li>
+              <a class="header-service-link" href="#">Каталог товаров</a>
+            </li>
+            <li>
+              <a class="header-service-link" href="#">Доставка</a>
+            </li>
+            <li>
+              <a class="header-service-link" href="#">Гарантия</a>
+            </li>
+            <li>
+              <a class="header-service-link" href="#">Контакты</a>
+            </li>
+          </ul> <!-- end header-service-links -->
+
+          <ul class="header-dropping-list">
+            <li>
+              <a href="#">Виртуальная реальность</a>
+            </li>
+            <li>
+              <a href="#">Моноподы для селфи</a>
+            </li>
+            <li>
+              <a href="#">Экшн-камеры</a>
+            </li>
+            <li>
+              <a href="#">Фитнес-браслеты</a>
+            </li>
+            <li>
+              <a href="#">Умные часы</a>
+            </li>
+            <li>
+              <a href="#">Квадрокоптеры</a>
+            </li>
+          </ul> <!-- end header-dropping-list -->
+        </div> <!-- end main-header-columns -->
       </nav> <!-- end main-nav -->
     </header>
 
     <main>
-      <h1 class="visually hidden">Интернет-магазин "Device"</h1>
+      <h1 class="visually hidden container">Интернет-магазин "Device"</h1>
 
-      <section class="promo-description">
+      <section class="promo-description container">
         <h2 class="visually-hidden">Обзор самых популярных товаров</h2>
 
         <input type="radio" name="upper-toggle" id="upper-toggle-1" checked>
@@ -172,7 +177,7 @@
         </ul> <!-- end upper-slider -->
       </section> <!-- end promo-description -->
 
-      <section class="shop-category">
+      <section class="shop-category container">
         <h2 class="visually-hidden">Группы товаров</h2>
 
         <ul class="item-groups">
@@ -223,43 +228,47 @@
       </section> <!-- end shop-category -->
 
       <section class="service">
-        <h2 class="visually hidden">Преимущества</h2>
+        <div class="container">
+          <h2 class="visually hidden">Преимущества</h2>
 
-        <input type="radio" name="lower-toggle" id="lower-toggle-1" checked>
-        <input type="radio" name="lower-toggle" id="lower-toggle-2">
-        <input type="radio" name="lower-toggle" id="lower-toggle-3">
+          <input type="radio" name="lower-toggle" id="lower-toggle-1" checked>
+          <input type="radio" name="lower-toggle" id="lower-toggle-2">
+          <input type="radio" name="lower-toggle" id="lower-toggle-3">
 
-        <div class="lower-toggles">
-          <label class="button lower-toggle-button" for="lower-toggle-1">Доставка</label>
-          <label class="button lower-toggle-button" for="lower-toggle-2">Кредит</label>
-          <label class="button lower-toggle-button" for="lower-toggle-3">Гарантия</label>
+          <div class="lower-slider-container">
+            <div class="lower-toggles">
+              <label class="button lower-toggle-button" for="lower-toggle-1">Доставка</label>
+              <label class="button lower-toggle-button" for="lower-toggle-2">Кредит</label>
+              <label class="button lower-toggle-button" for="lower-toggle-3">Гарантия</label>
+            </div>
+
+            <ul class="lower-slider">
+              <li class="lower-slide-1">
+                <div class="lower-slide-description">
+                  <h3>Доставка</h3>
+                  <p class="advantage-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                </div>
+              </li>
+              <li class="lower-slide-2">
+                <div class="lower-slide-description">
+                  <h3>Гарантия</h3>
+                  <p class="advantage-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+                    <br>
+                    Товар, не дом, конечно же.</p>
+                </div>
+              </li>
+              <li class="lower-slide-3">
+                <div class="lower-slide-description">
+                  <h3>Кредит</h3>
+                  <p class="advantage-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+                </div>
+              </li>
+            </ul> <!-- end lower-slider -->
+          </div>
         </div>
-
-        <ul class="lower-slider">
-          <li class="lower-slide-1">
-            <div class="lower-slide-description">
-              <h3>Доставка</h3>
-              <p class="advantage-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            </div>
-          </li>
-          <li class="lower-slide-2">
-            <div class="lower-slide-description">
-              <h3>Гарантия</h3>
-              <p class="advantage-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
-                <br>
-                Товар, не дом, конечно же.</p>
-            </div>
-          </li>
-          <li class="lower-slide-3">
-            <div class="lower-slide-description">
-              <h3>Кредит</h3>
-              <p class="advantage-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-            </div>
-          </li>
-        </ul> <!-- end lower-slider -->
       </section> <!-- end service -->
 
-      <section class="brands">
+      <section class="brands container">
         <h2 class="visually-hidden">Бренды</h2>
 
         <ul class="brands-list">
@@ -286,7 +295,7 @@
         </ul> <!-- end brands-list -->
       </section> <!-- end brands -->
 
-      <section class="reference-block">
+      <section class="reference-block container">
         <section class="about-us">
           <h2>О нас</h2>
 
@@ -318,7 +327,7 @@
         </section> <!-- end contacts -->
       </section> <!-- end reference-block -->
 
-      <section class="modal modal-write-us">
+      <section class="modal modal-write-us container">
         <button class="modal-close" type="button">Закрыть</button>
 
         <h2 class="visually hidden">Форма обратной связи</h2>
@@ -342,7 +351,7 @@
         </form>
       </section> <!-- end modal modal-write-us -->
 
-      <section class="modal modal-popup-map">
+      <section class="modal modal-popup-map container">
         <button class="modal-close" type="button">Закрыть</button>
 
         <h2 class="visually hidden">Всплывающая карта</h2>
@@ -352,57 +361,59 @@
     </main>
 
     <footer class="main-footer">
-          <div class="footer-left-part">
-            <a class="main-footer-logo">
-              <p>DEVICE</p>
-            </a>
+      <div class="container">
+        <div class="footer-left-part">
+          <a class="main-footer-logo">
+            <p>DEVICE</p>
+          </a>
 
-            <p class="adress">г. Москва, ул. Строителей, 15</p>
-          </div> <!-- end footer-left-part -->
-          <div class="footer-middle-part">
-            <ul class="footer-service-links">
-              <li>
-                <a href="#">Доставка</a>
-              </li>
-              <li>
-                <a href="#">Гарантия</a>
-              </li>
-              <li>
-                <a href="#">Контакты</a>
-              </li>
-            </ul>
-            <ul class="social-buttons">
-              <li>
-                <a href="#" class="social-btn btn-fb">Facebook</a>
-              </li>
-              <li>
-                <a href="#" class="social-btn btn-insta">Instagram</a>
-              </li>
-              <li>
-                <a href="#" class="social-btn btn-tw">Twitter</a>
-              </li>
-            </ul>
-          </div> <!-- end footer-middle-part -->
+          <p class="adress">г. Москва, ул. Строителей, 15</p>
+        </div> <!-- end footer-left-part -->
+        <div class="footer-middle-part">
+          <ul class="footer-service-links">
+            <li>
+              <a href="#">Доставка</a>
+            </li>
+            <li>
+              <a href="#">Гарантия</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+          <ul class="social-buttons">
+            <li>
+              <a href="#" class="social-btn btn-fb">Facebook</a>
+            </li>
+            <li>
+              <a href="#" class="social-btn btn-insta">Instagram</a>
+            </li>
+            <li>
+              <a href="#" class="social-btn btn-tw">Twitter</a>
+            </li>
+          </ul>
+        </div> <!-- end footer-middle-part -->
 
-          <div class="footer-right-part">
-            <ul class="footer-user-links">
-              <li>
-                <a href="#">Войти</a>
-              </li>
-              <li>
-                <a href="#">Сравнить</a>
-              </li>
-              <li>
-                <a href="#">Корзина</a>
-              </li>
-            </ul>
+        <div class="footer-right-part">
+          <ul class="footer-user-links">
+            <li>
+              <a href="#">Войти</a>
+            </li>
+            <li>
+              <a href="#">Сравнить</a>
+            </li>
+            <li>
+              <a href="#">Корзина</a>
+            </li>
+          </ul>
 
-            <p class="phone">Тел.: +7 (495) 495-95-95</p>
+          <p class="phone">Тел.: +7 (495) 495-95-95</p>
 
-            <a href="#" class="developer-logo">
-              <img src="img/logo-html.svg" width="27" height="35" alt="HTML academy">
-            </a>
-          </div> <!-- end footer-right-part -->
+          <a href="#" class="developer-logo">
+            <img src="img/logo-html.svg" width="27" height="35" alt="HTML academy">
+          </a>
+        </div> <!-- end footer-right-part -->
+      </div>
     </footer>
   </body>
 </html>

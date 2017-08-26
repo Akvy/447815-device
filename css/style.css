@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: 'Gilroy';
+    font-family: "Gilroy";
     src: url("../fontsfonts/gilroylight.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
@@ -55,6 +55,14 @@ a {
 
 .button:active > span {
   opacity: 0.3;
+}
+
+/*== MODAL == */
+
+.modal {
+  text-align: center;
+  /*Это временная мера, больно карта и форма обратной связи были кривые,
+  решил их в контейнер убрать и выровнить по центру :)*/
 }
 
 /*== MODAL-WRITE-US == */
@@ -105,8 +113,32 @@ a {
 
 /*== HEADER == */
 
-.main-nav {
+.main-header {
   background-color: #f7e296;
+
+  padding-left: 55px;
+  padding-right: 60px;
+
+  box-sizing: border-box;
+}
+
+.container,
+.modal {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.main-header-logo p {
+  font-family: "Gilroy";
+  font-size: 48px;
+  color: #000000;
+
+  margin-bottom: 30px;
+}
+
+.main-header-columns {
+  display: flex;
+  flex-direction: column;
 }
 
 .search-form input[placeholder] {
@@ -152,16 +184,12 @@ a {
   opacity: 0.3;
 }
 
-.main-header-logo p {
-  font-family: "Gilroy";
-  font-size: 48px;
-  color: #000000;
-}
-
 .header-user-links,
 .header-service-links,
 .header-dropping-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .header-service-link {
@@ -209,16 +237,44 @@ a {
   background-color: #464646;
 }
 
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 60px;
+}
+
+.footer-left-part {
+  width: 250px;
+}
+
+.footer-middle-part {
+  width: 450px;
+
+  text-align: center;
+}
+
+.footer-right-part {
+  width: 350px;
+
+  text-align: right;
+}
+
 .main-footer-logo p {
   font-family: "Gilroy";
   font-size: 48px;
   color: #ffc600;
+
+  margin: 0;
+  padding: 0;
 }
 
 .footer-service-links,
 .social-buttons,
 .footer-user-links {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-user-links a {
@@ -269,8 +325,26 @@ a {
 
 /*== PROMO-DESCRIPTION ==*/
 
+.upper-slider {
+  width: 1100px;
+  margin: 0 30px;
+
+  display: flex;
+  flex-direction: column;
+}
+
 .upper-slider li {
   list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+}
+
+.description-container {
+  width: 530px;
+
+  margin-left: auto;
 }
 
 .upper-slider b {
@@ -309,6 +383,17 @@ a {
 
 .item-groups {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 110px;
+  margin-bottom: 85px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-group-container {
+  width: 160px;
 }
 
 .item-group-container a {
@@ -327,8 +412,27 @@ a {
   background-color: #e5e5e5;
 }
 
+.lower-slider-container {
+  padding-top: 80px;
+  padding-bottom: 70px;
+
+
+  display: flex;
+}
+
+.lower-toggles {
+  width: 290px;
+
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
 .lower-slider {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .lower-toggles .lower-toggle-button:active {
@@ -337,9 +441,15 @@ a {
   background-color: #000000;
 }
 
+.lower-slide-description {
+  width: 760px;
+}
+
 .lower-slide-description h3 {
   font-family: "Gilroy";
   font-size: 47px;
+
+  margin: 0;
 }
 
 .lower-slide-description .advantage-description {
@@ -352,13 +462,32 @@ a {
 
 .brands-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 95px;
+  margin-bottom: 100px;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .brands-item {
   opacity: 0.2;
 }
 
+/*== REFERENCE BLOCK ==*/
+
+.reference-block {
+  margin-bottom: 100px;
+
+  display: flex;
+}
+
 /*== ABOUT US ==*/
+
+.about-us {
+  width: 600px;
+}
 
 .about-us h2 {
   font-family: "Gilroy";
@@ -383,6 +512,10 @@ a {
 
 /*== CONTACTS == */
 
+.contacts {
+  width: 560px;
+}
+
 .contacts h2 {
   font-family: "Gilroy";
   font-size: 47px;
@@ -398,13 +531,24 @@ a {
 
 /*== CATALOG. MAIN ==*/
 
+.main-inner-container {
+  padding-left: 55px;
+}
+
 .inner-page-header {
   font-family: "Gilroy";
   font-size: 47px;
+
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 35px;
 }
 
 .breadcrumbs {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 45px;
 }
 
 .breadcrumbs a,
@@ -425,17 +569,34 @@ a {
   opacity: 0.1;
 }
 
+/*== CATALOG-REFERENCE-BLOCK ==*/
+
+.catalog-reference-block {
+  display: flex;
+}
+
 /*== FILTERS == */
 
-.filters{
+.filters {
   background-color: #efefef;
+
+  width: 275px;
+
+  padding-left: 55px;
 }
+/*Здесь думал-думал и решил не химичить пока, а твоего совета спросить как ты и говорила мне в начале)
+Здесь заливка слева за контейнер должна уходить, я не понял как это сделать)
+Моя догадка: чтобы не плодить больше лишних тегов и контейнеров, тупо сделать
+псевдоэлементами блочки и слева растянуть их до конца окна браузера... :)
+Ну и справа для "сортировки" аналогично... :) */
 
 .filters h2 {
   font-family: "Gilroy";
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+
+  margin: 0;
 
   background-color: #dbdbdb;
 }
@@ -452,11 +613,12 @@ a {
 
 .color-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .color-list label,
 .filter-bluetooth label {
-  font-family: "Open Sans";
   font-size: 14px;
   line-height: 40px;
   font-weight: 300;
@@ -464,18 +626,31 @@ a {
 
 /*== CATALOG == */
 
+.catalog {
+  width: 885px;
+
+}
+
+.catalog-sorting-container {
+  background-color: #ebebeb;
+
+  display: flex;
+}
+
 .catalog h2 {
   font-family: "Gilroy";
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
 
-  background-color: #ebebeb;
+  margin: 0;
 }
 
 .sorting-type,
 .sorting-priority {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .sorting-type-item a {
@@ -520,7 +695,22 @@ a {
 
 .catalog-list {
   list-style: none;
+  margin: 0;
+  padding: 70px;
+
+  width: 815px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
+
+.catalog-item {
+  width: 360px;
+
+  margin-bottom: 60px;
+}
+
 .catalog-item img:hover {
   opacity: 0.7;
 }
@@ -561,8 +751,27 @@ a {
   opacity: 0.2;
 }
 
+.paginator-container {
+  background-color: #ebebeb;
+
+  width: 815px;
+
+  margin-left: 70px;
+  margin-bottom: 70px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.paginator-btn {
+  background-color: inherit;
+  border: none;
+}
+
 .paginator {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .paginator-item {
@@ -570,15 +779,13 @@ a {
 }
 
 .paginator-item a,
-.paginator-item button {
+.paginator-btn {
   font-family: "Gilroy";
   font-size: 16px;
   color: #000000;
   letter-spacing: 0.2em;
-
-  background-color: #ebebeb;
-  border: none;
 }
+
 .paginator-item a {
   opacity: 0.3;
 }
@@ -587,10 +794,10 @@ a {
   opacity: 1;
 }
 
-.paginator-item button:hover {
+.paginator-btn:hover {
   background-color: #d9d9d9;
 }
 
-.paginator-item button:active {
+.paginator-btn:active {
   opacity: 0.08;
 }
