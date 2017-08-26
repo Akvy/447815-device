@@ -14,6 +14,21 @@
     font-style: normal;
 }
 
+/*== TEMPORARY == */
+
+.hide-from-view {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*== GLOBAL ==*/
 
 body {
@@ -35,7 +50,7 @@ a {
 }
 
 .button {
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
   color: #000000;
@@ -57,83 +72,27 @@ a {
   opacity: 0.3;
 }
 
-/*== MODAL == */
-
-.modal {
-  text-align: center;
-  /*Это временная мера, больно карта и форма обратной связи были кривые,
-  решил их в контейнер убрать и выровнить по центру :)*/
-}
-
-/*== MODAL-WRITE-US == */
-
-.write-us-form label {
-  font-family: "Gilroy";
-  font-size: 18px;
-  line-height: 18px;
-}
-
-.write-us-form input,
-.write-us-form textarea {
-  background-color: #e5e5e5;
-  opacity: 0.5;
-}
-
-.write-us-form input:hover,
-.write-us-form textarea:hover {
-  opacity: 0.8;
-}
-
-.write-us-form input:focus,
-.write-us-form textarea:focus {
-  background-color: #ffffff;
-  opacity: 0.5;
-
-  border: 3px solid #f0c52e;
-}
-
-.write-us-form input:invalid {
-  background-color: #edb5b5;
-
-  opacity: 0.5;
-}
-
-.write-us-form input[placeholder],
-.write-us-form textarea[placeholder] {
-  font-size: 14px;
-  line-height: 18px;
-  color: #464646;
-  opacity: 0.4;
-}
-
-.write-us-form input[placeholder]:focus,
-.write-us-form textarea[placeholder]:focus {
-  opacity: 1;
-}
-
 /*== HEADER == */
 
 .main-header {
-  background-color: #f7e296;
-
   padding-left: 55px;
   padding-right: 60px;
-
   box-sizing: border-box;
+
+  background-color: #f7e296;
 }
 
-.container,
-.modal {
+.container {
   width: 1160px;
   margin: 0 auto;
 }
 
 .main-header-logo p {
+  margin-bottom: 30px;
+
   font-family: "Gilroy";
   font-size: 48px;
   color: #000000;
-
-  margin-bottom: 30px;
 }
 
 .main-header-columns {
@@ -146,9 +105,9 @@ a {
   line-height: 36px;
   color: #000000;
   font-weight: 300;
-  opacity: 0.3;
 
   background-color: inherit;
+  opacity: 0.3;
   border: none;
 }
 
@@ -158,7 +117,6 @@ a {
 
 .search-form input[placeholder]:focus {
   opacity: 1;
-
   border-bottom: 2px solid #000000;
 }
 
@@ -238,10 +196,9 @@ a {
 }
 
 .main-footer .container {
+  padding-top: 60px;
   display: flex;
   justify-content: space-between;
-
-  padding-top: 60px;
 }
 
 .footer-left-part {
@@ -261,12 +218,12 @@ a {
 }
 
 .main-footer-logo p {
+  margin: 0;
+  padding: 0;
+
   font-family: "Gilroy";
   font-size: 48px;
   color: #ffc600;
-
-  margin: 0;
-  padding: 0;
 }
 
 .footer-service-links,
@@ -281,6 +238,7 @@ a {
   line-height: 36px;
   color: #ffffff;
   font-weight: 300;
+
   opacity: 0.7;
 }
 
@@ -328,7 +286,6 @@ a {
 .upper-slider {
   width: 1100px;
   margin: 0 30px;
-
   display: flex;
   flex-direction: column;
 }
@@ -337,13 +294,11 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
-
   display: flex;
 }
 
 .description-container {
   width: 530px;
-
   margin-left: auto;
 }
 
@@ -387,7 +342,6 @@ a {
   padding: 0;
   margin-top: 110px;
   margin-bottom: 85px;
-
   display: flex;
   justify-content: space-between;
 }
@@ -415,16 +369,12 @@ a {
 .lower-slider-container {
   padding-top: 80px;
   padding-bottom: 70px;
-
-
   display: flex;
 }
 
 .lower-toggles {
   width: 290px;
-
   margin-right: auto;
-
   display: flex;
   flex-direction: column;
 }
@@ -446,10 +396,10 @@ a {
 }
 
 .lower-slide-description h3 {
+  margin: 0;
+
   font-family: "Gilroy";
   font-size: 47px;
-
-  margin: 0;
 }
 
 .lower-slide-description .advantage-description {
@@ -466,7 +416,6 @@ a {
   padding: 0;
   margin-top: 95px;
   margin-bottom: 100px;
-
   display: flex;
   justify-content: space-between;
 }
@@ -478,8 +427,7 @@ a {
 /*== REFERENCE BLOCK ==*/
 
 .reference-block {
-  margin-bottom: 100px;
-
+  margin-bottom: 70px;
   display: flex;
 }
 
@@ -499,6 +447,8 @@ a {
   color: #464646;
   font-weight: 300;
 }
+
+
 
 .about-us-partners { /*Пока их убрал, но нужно будет подобрать и сделать  */
   list-style: none;
@@ -527,6 +477,59 @@ a {
   font-weight: 300;
 }
 
+/*== MODAL == */
+
+/*== MODAL-WRITE-US == */
+
+.modal {
+  display: flex;
+  margin: auto;
+  width: 960px;
+}
+
+.write-us-form label {
+  font-family: "Gilroy";
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.write-us-form input,
+.write-us-form textarea {
+  background-color: #e5e5e5;
+  opacity: 0.5;
+}
+
+.write-us-form input:hover,
+.write-us-form textarea:hover {
+  opacity: 0.8;
+}
+
+.write-us-form input:focus,
+.write-us-form textarea:focus {
+  background-color: #ffffff;
+  opacity: 0.5;
+  border: 3px solid #f0c52e;
+}
+
+.write-us-form input:invalid {
+  background-color: #edb5b5;
+  opacity: 0.5;
+}
+
+.write-us-form input[placeholder],
+.write-us-form textarea[placeholder] {
+  font-size: 14px;
+  line-height: 18px;
+  color: #464646;
+
+  opacity: 0.4;
+}
+
+.write-us-form input[placeholder]:focus,
+.write-us-form textarea[placeholder]:focus {
+  opacity: 1;
+}
+
 /*== CATALOG [PAGE] ==*/
 
 /*== CATALOG. MAIN ==*/
@@ -536,12 +539,12 @@ a {
 }
 
 .inner-page-header {
-  font-family: "Gilroy";
-  font-size: 47px;
-
   margin: 0;
   margin-top: 40px;
   margin-bottom: 35px;
+
+  font-family: "Gilroy";
+  font-size: 47px;
 }
 
 .breadcrumbs {
@@ -557,6 +560,7 @@ a {
   line-height: 36px;
   color: #000000;
   font-weight: 300;
+
   opacity: 0.3;
 
 }
@@ -578,25 +582,20 @@ a {
 /*== FILTERS == */
 
 .filters {
-  background-color: #efefef;
-
   width: 275px;
-
   padding-left: 55px;
+
+  background-color: #efefef;
 }
-/*Здесь думал-думал и решил не химичить пока, а твоего совета спросить как ты и говорила мне в начале)
-Здесь заливка слева за контейнер должна уходить, я не понял как это сделать)
-Моя догадка: чтобы не плодить больше лишних тегов и контейнеров, тупо сделать
-псевдоэлементами блочки и слева растянуть их до конца окна браузера... :)
-Ну и справа для "сортировки" аналогично... :) */
+/* Псевдоэлемент или градиент? Вот в чем вопрос. */
 
 .filters h2 {
+  margin: 0;
+
   font-family: "Gilroy";
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-
-  margin: 0;
 
   background-color: #dbdbdb;
 }
@@ -632,18 +631,18 @@ a {
 }
 
 .catalog-sorting-container {
-  background-color: #ebebeb;
-
   display: flex;
+
+  background-color: #ebebeb;
 }
 
 .catalog h2 {
+  margin: 0;
+
   font-family: "Gilroy";
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-
-  margin: 0;
 }
 
 .sorting-type,
@@ -658,6 +657,7 @@ a {
   line-height: 18px;
   color: #000000;
   font-weight: 300;
+
   opacity: 0.3;
 }
 
@@ -697,18 +697,15 @@ a {
   list-style: none;
   margin: 0;
   padding: 70px;
-
   width: 815px;
-
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .catalog-item {
   width: 360px;
-
-  margin-bottom: 60px;
+  margin-bottom: 75px;
+  margin-right: 40px;
 }
 
 .catalog-item img:hover {
@@ -728,13 +725,18 @@ a {
   font-weight: 400;
 }
 
+.catalog-item-info {
+  display: flex;
+  align-items: center;
+}
+
 .hover-info-compare-button {
   font-size: 13px;
   line-height: 36px;
   font-weight: 300;
-  opacity: 0.7;
 
   background-color: #eeeeee;
+  opacity: 0.7;
   border: none;
 }
 
@@ -752,15 +754,13 @@ a {
 }
 
 .paginator-container {
-  background-color: #ebebeb;
-
   width: 815px;
-
   margin-left: 70px;
   margin-bottom: 70px;
-
   display: flex;
   justify-content: space-between;
+
+  background-color: #ebebeb;
 }
 
 .paginator-btn {

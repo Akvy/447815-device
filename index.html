@@ -123,7 +123,7 @@
               </table>
             </div> <!-- end description-container -->
           </li> <!-- end slide-1 -->
-          <li class="slide-2">
+          <li class="slide-2 hide-from-view">
             <img src="img/slider-fitness.png" alt="Мотивирующий фитнес-браслет" width="370" height="500">
 
             <div class="description-container">
@@ -148,7 +148,7 @@
             </div> <!-- end description-container -->
           </li> <!-- end slide-2 -->
 
-          <li class="slide-3">
+          <li class="slide-3 hide-from-view">
             <img src="img/slider-quadrocopter.png" alt="Квадрокоптер с лазером" width="535" height="330">
 
             <div class="description-container">
@@ -249,7 +249,7 @@
                   <p class="advantage-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
                 </div>
               </li>
-              <li class="lower-slide-2">
+              <li class="lower-slide-2 hide-from-view">
                 <div class="lower-slide-description">
                   <h3>Гарантия</h3>
                   <p class="advantage-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
@@ -257,7 +257,7 @@
                     Товар, не дом, конечно же.</p>
                 </div>
               </li>
-              <li class="lower-slide-3">
+              <li class="lower-slide-3 hide-from-view">
                 <div class="lower-slide-description">
                   <h3>Кредит</h3>
                   <p class="advantage-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
@@ -295,7 +295,7 @@
         </ul> <!-- end brands-list -->
       </section> <!-- end brands -->
 
-      <section class="reference-block container">
+      <div class="reference-block container">
         <section class="about-us">
           <h2>О нас</h2>
 
@@ -325,38 +325,41 @@
             <span>Напишите нам</span>
           </a>
         </section> <!-- end contacts -->
-      </section> <!-- end reference-block -->
+      </div> <!-- end reference-block -->
 
-      <section class="modal modal-write-us container">
-        <button class="modal-close" type="button">Закрыть</button>
+      <section class="modal modal-write-us hide-from-view"`>
+        <div class="modal-container">
+          <button class="modal-close" type="button">Закрыть</button>
 
-        <h2 class="visually hidden">Форма обратной связи</h2>
+          <h2 class="visually hidden">Форма обратной связи</h2>
 
-        <form class="write-us-form" action="index.html" method="post">
-          <label>Ваше имя:
-            <input type="text" name="name" placeholder="Представьтесь, пожалуйста">
-          </label>
+          <form class="write-us-form" action="index.html" method="post">
+            <label>Ваше имя:
+              <input type="text" name="name" placeholder="Представьтесь, пожалуйста">
+            </label>
 
-          <label>Ваш e-mail:
-            <input type="text" name="email" placeholder="Для отправки ответа">
-          </label>
+            <label>Ваш e-mail:
+              <input type="text" name="email" placeholder="Для отправки ответа">
+            </label>
 
-          <label>Текст письма:
-            <textarea name="customer-comments" placeholder="В свободной форме" rows="16" cols="76"></textarea>
-          </label>
+            <label>Текст письма:
+              <textarea name="customer-comments" placeholder="В свободной форме" rows="16" cols="76"></textarea>
+            </label>
 
-          <button type="submit" class="button write-us-submit">
-            <span>Отправить</span>
-          </button>
-        </form>
+            <button type="submit" class="button write-us-submit">
+              <span>Отправить</span>
+            </button>
+          </form>
+        </div>
       </section> <!-- end modal modal-write-us -->
 
-      <section class="modal modal-popup-map container">
-        <button class="modal-close" type="button">Закрыть</button>
 
-        <h2 class="visually hidden">Всплывающая карта</h2>
-
-        <img src="img/popup-map.jpg" class="popup-map" width="994" height="593" alt="Наш адрес: г. Москва, ул. Строителей, 15">
+      <section class="modal modal-popup-map hide-from-view">
+        <div class="modal-container">
+          <button class="modal-close" type="button">Закрыть</button>
+          <h2 class="visually hidden">Всплывающая карта</h2>
+          <img src="img/popup-map.jpg" class="popup-map" width="960" height="560" alt="Наш адрес: г. Москва, ул. Строителей, 15">
+        </div>
       </section> <!-- end modal modal-popup-map -->
     </main>
 
