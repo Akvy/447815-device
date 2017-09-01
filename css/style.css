@@ -16,7 +16,8 @@
 
 /*== TEMPORARY == */
 
-.hide-from-view {
+.hide-from-view,
+.visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -32,6 +33,7 @@
 /*== GLOBAL ==*/
 
 body {
+  min-width: 1160px;
   margin: 0;
   padding: 0;
 
@@ -40,7 +42,7 @@ body {
   line-height: 30px;
   font-weight: bold;
   color: #000000;
-  /*letter-spacing: 0.01em;*/
+  letter-spacing: 0.01em;
 
   background-color: #ffffff;
 }
@@ -50,6 +52,12 @@ a {
 }
 
 .button {
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 44px;
+  padding-right: 40px;
+
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
@@ -59,13 +67,14 @@ a {
   letter-spacing: 0.2em;
 
   background-color: #f0c52e;
-  border: none;
+  background-image: linear-gradient(#ffffff 19px, #f0c52e 19px, #f0c52e 26px, #ffffff 26px);
 }
 
 .button:hover,
 .button:focus,
 .button:active {
   background-color: #f0c52e;
+  background-image: none;
 }
 
 .button:active > span {
@@ -79,7 +88,7 @@ a {
   padding-right: 60px;
   box-sizing: border-box;
 
-  background-color: #f7e296;
+  background-image: linear-gradient(#ffffff 15px, #f7e296 15px);
 }
 
 .container {
@@ -88,16 +97,59 @@ a {
 }
 
 .main-header-logo p {
-  margin-bottom: 30px;
+  position: relative;
 
-  font-family: "Gilroy";
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 2px;
+
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 48px;
   color: #000000;
 }
 
+.search-form-container {
+  position: relative;
+}
+
+.search-form-container::after {
+  position: absolute;
+  top: 3px;
+  left: 7px;
+
+  content: "";
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/search-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 1px 1px;
+}
+
+.main-header-upper-container {
+  display: flex;
+  width: 1060px;
+  justify-content: space-between;
+}
+
+.upper-container-left-part {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .main-header-columns {
+  position: relative;
+
   display: flex;
   flex-direction: column;
+}
+
+.search-form input {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 12px;
+  padding-left: 43px;
+  width: 355px;
 }
 
 .search-form input[placeholder] {
@@ -116,6 +168,8 @@ a {
 }
 
 .search-form input[placeholder]:focus {
+  margin-bottom: -2px;
+
   opacity: 1;
   border-bottom: 2px solid #000000;
 }
@@ -150,12 +204,83 @@ a {
   padding: 0;
 }
 
-.header-service-link {
-  font-family: "Gilroy";
-  font-size: 18px;
-  color: #000000;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
+.header-user-links {
+  display: flex;
+  flex-wrap: wrap;
+  width: 519px;
+}
+
+.header-user-links li:nth-child(2) {
+  margin-left: 207px;
+}
+
+.header-user-links li:nth-child(3) {
+  margin-left: 34px;
+}
+
+.header-user-links a::before {
+  position: absolute;
+  top: 4px;
+  left: -2px;
+
+  content: "";
+  width: 25px;
+  height: 25px;
+
+  opacity: 1;
+}
+
+.header-user-link:first-child a::before {
+  background-image: url("../img/user-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 6px 8px;
+}
+
+.header-user-link:nth-child(2) a::before {
+  background-image: url("../img/compare-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 12px 10px;
+}
+
+.header-user-link:nth-child(3) a::before {
+  background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 9px 8px;
+}
+
+.header-user-links a {
+  position: relative;
+
+  display: block;
+  padding-left: 30px;
+}
+
+.header-dropping-list {
+  position: absolute;
+  top: 199px;
+  left: 140px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 140px;
+  width: 1160px;
+
+  background-color: #F7E296;
+}
+
+.header-dropping-list li {
+    flex-basis: 40px;
+}
+
+.header-dropping-list .row-2 {
+  margin-left: 60px;
+}
+
+.header-dropping-list .row-3 {
+  flex-basis: 65px;
+  margin-left: 80px;
 }
 
 .header-user-links a,
@@ -167,15 +292,69 @@ a {
   /*letter-spacing: 0;*/
 }
 
+.header-service-links {
+  margin: 0;
+  padding: 0;
+  width: 1105px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 21px;
+  margin-bottom: 20px;
+}
+
+.header-service-links li:first-child {
+  position: relative;
+}
+
+.header-service-links li:first-child::after { /*Этот плюсик нужно оживлять при ховере,
+  но я пока этого не сделал. Мне попробовать это сделать или дождаться вебинара соответсвующего?)*/
+  position: absolute;
+  top: 2px;
+  left: 230px;
+
+  content: "";
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/plus-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 0.3;
+}
+
+.header-service-links li:nth-child(2) {
+  margin-left: 318px;
+}
+
+.header-service-links li:nth-child(3) {
+  margin-left: 30px;
+}
+
+.header-service-links li:nth-child(4) {
+  margin-left: 105px;
+}
+
+.header-service-link {
+  margin-left: 4px;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
 .header-user-links a:hover,
 .header-dropping-list a:hover,
-.header-service-links a:hover {
+.header-service-links a:hover,
+.header-user-links a:hover::before {
   opacity: 0.6;
 }
 
 .header-user-links a:active,
 .header-dropping-list a:active,
-.header-service-links a:active {
+.header-service-links a:active,
+.header-user-links a:active::before {
   opacity: 0.3;
 }
 
@@ -196,6 +375,9 @@ a {
 }
 
 .main-footer .container {
+  position: relative;
+  left: -1px;
+
   padding-top: 60px;
   display: flex;
   justify-content: space-between;
@@ -203,6 +385,11 @@ a {
 
 .footer-left-part {
   width: 250px;
+}
+
+.footer-left-part p {
+  margin-left: -1px;
+  margin-top: 31px;
 }
 
 .footer-middle-part {
@@ -218,12 +405,28 @@ a {
 }
 
 .main-footer-logo p {
+  position: relative;
+
   margin: 0;
   padding: 0;
+  margin-left: -2px;
+  margin-top: 9px;
 
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 48px;
   color: #ffc600;
+}
+
+.footer-left-part::after {
+  position: absolute;
+  top: 237px;
+  left: 1px;
+
+  content: "";
+  width: 80px;
+  height: 7px;
+
+  background-color: #F0C52E;
 }
 
 .footer-service-links,
@@ -234,7 +437,35 @@ a {
   padding: 0;
 }
 
-.footer-user-links a {
+.footer-service-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 74px;
+  margin-left: 63px;
+  width: 428px;
+}
+
+.footer-user-links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 26px;
+  width: 329px;
+}
+
+.developer-logo {
+  position: relative;
+}
+
+.developer-logo svg {
+  position: absolute;
+  left: -28px;
+
+  margin-top: 48px;
+}
+
+.footer-user-links span {
+
   line-height: 36px;
   color: #ffffff;
   font-weight: 300;
@@ -242,11 +473,41 @@ a {
   opacity: 0.7;
 }
 
-.footer-user-links a:hover {
+.footer-user-link:nth-child(2) {
+  margin-left: 43px;
+}
+
+.footer-user-link:nth-child(3) {
+  margin-left: 41px;
+}
+
+.footer-user-link:nth-child(1) span {
+    margin-left: 9px;
+}
+
+.footer-user-link:nth-child(2) span {
+    margin-left: 6px;
+}
+
+.footer-user-link:nth-child(3) span {
+    margin-left: 7px;
+}
+
+.footer-user-links svg:hover,
+.developer-logo:hover {
+  opacity: 0.6;
+}
+
+.footer-user-links svg:active,
+.developer-logo:active {
+  opacity: 0.3;
+}
+
+.footer-user-links span:hover {
   opacity: 1;
 }
 
-.footer-user-links a:active {
+.footer-user-links span:active {
   opacity: 0.3;
 }
 
@@ -257,8 +518,13 @@ a {
   font-weight: 300;
 }
 
+.phone {
+  margin-top: 34px;
+  width: 354px;
+}
+
 .footer-service-links a {
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   color: #ffffff;
   text-transform: uppercase;
@@ -275,8 +541,25 @@ a {
   opacity: 0.3;
 }
 
-.social-buttons .social-btn {
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-left: 205px;
+  width: 141px;
+
   color: #ffffff;
+
+  opacity: 0.3;
+}
+
+.social-buttons svg:hover {
+  opacity: 0.6;
+}
+
+.social-buttons svg:active {
+  opacity: 0.1;
 }
 
 /*== INDEX [PAGE] == */
@@ -284,10 +567,31 @@ a {
 /*== PROMO-DESCRIPTION ==*/
 
 .upper-slider {
-  width: 1100px;
-  margin: 0 30px;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+
+  padding-right: 50px;
+  padding-top: 29px;
+  margin: 0;
+
+  background-image: linear-gradient(#F7E296 140px, #ffffff 140px);
+}
+
+.slide-1 img {
+  position: relative;
+  top: 0px;
+  left: 50px;
+}
+
+.slide-2 img {
+  position: relative;
+  top: 8px;
+  left: 12px;
+}
+
+.slide-3 img {
+  position: relative;
+  top: 65px;
+  left: -8px;
 }
 
 .upper-slider li {
@@ -298,33 +602,91 @@ a {
 }
 
 .description-container {
-  width: 530px;
+  position: relative;
+  z-index: 0;
+
+  width: 511px;
   margin-left: auto;
+  padding-top: 82px;
 }
 
 .upper-slider b {
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
+  line-height: 55px; /*Здесь вообще интересно: в фотошопе говорят,
+  что межстрочное расстояние авто, а на макете при этом оно явно не авто ))
+  Подобрал, но все же хрень какая-то со шрифтами, они везде пляшут и расстраивают меня)
+  Посмотри, пожалуйста, где я с ними накосячил, чтобы можно было сделать уже нормально с нормальными шрифтами)*/
 }
 
 .description-container .slide-number {
-  font-family: "Gilroy";
+  position: absolute;
+  top: 61px;
+  right: -1px;
+  z-index: -1;
+
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 179.2px;
   color: #ffffff;
 
   background-color: #f7e296;
 }
 
+.description-container b::before {
+  position: absolute;
+  top: 37px;
+  left: 1px;
+
+  content: "";
+  width: 100px;
+  height: 7px;
+
+  background-color: #ffffff;
+}
+
 .description-container .item-description {
+  padding-top: 3px;
+  padding-bottom: 25px;
+  width: 490px;
+
   line-height: 30px;
   color: #464646;
   font-weight: 300;
 }
 
+.slide-2 .item-description {
+  width: 450px;
+}
+
+.slide-3 .item-description {
+  width: 480px;
+}
+
+.slide-table {
+  padding-top: 53px;
+}
+
+.slide-table th,
+.slide-table td {
+  padding-right: 65px;
+}
+
+.slide-table th:nth-child(2),
+.slide-table td:nth-child(2){
+  padding-right: 75px;
+}
+
+.slide-table th:last-child,
+.slide-table td:last-child {
+  padding-right: 0;
+}
+
 .slide-table th {
-  font-family: "Gilroy";
+  padding-bottom: 13px;
+
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .slide-table td {
@@ -336,47 +698,139 @@ a {
 
 /*== SHOP-CATEGORY ==*/
 
+.shop-category {
+  position: relative;
+  left: -1px;
+
+  padding-top: 168px;
+}
+
 .item-groups {
   list-style: none;
   margin: 0;
   padding: 0;
   margin-top: 110px;
-  margin-bottom: 85px;
+  margin-bottom: 53px;
   display: flex;
   justify-content: space-between;
 }
 
 .item-group-container {
+  position: relative;
+
   width: 160px;
 }
 
+.item-group-container a::before {
+  position: absolute;
+  top: -191px;
+  left: 1px;
+
+  content: "";
+  width: 160px;
+  height: 160px;
+
+  background-color: #F7E296;
+}
+
+.item-group:nth-child(1) svg {
+  position: absolute;
+  top: -217px;
+  left: 32px;
+}
+
+.item-group:nth-child(2) svg {
+  position: absolute;
+  top: -228px;
+  left: 39px;
+}
+.item-group:nth-child(3) svg {
+  position: absolute;
+  top: -201px;
+  left: 50px;
+}
+
+.item-group:nth-child(4) svg {
+  position: absolute;
+  top: -219px;
+  left: 29px;
+}
+
+.item-group:nth-child(5) svg {
+  position: absolute;
+  top: -207px;
+  left: 56px;
+}
+
+.item-group:nth-child(6) svg {
+  position: absolute;
+  top: -190px;
+  left: 14px;
+}
+
 .item-group-container a {
-  font-family: "Gilroy";
-  font-size: 18px;
+  position: relative;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 16px; /*здесь вообще 16 размер шрифта подошел, хотя по фотошопу 18..
+  и лайнхай подбирать опять. Я его подбирать сознательно не стал, т.к. думаю когда
+  шрифты починим и не придется)*/
   color: #000000;
 }
 
-.item-group-container:active {
+.item-group-container:hover a::before{
+  background-color: #F0C52E;
+}
+
+.item-class-description:active,
+.item-group svg:active { /*Здесь сделал, но нажатие по отдельности работает, так и должно быть? :)*/
   opacity: 0.3;
 }
 
 /*== SERVICE ==*/
 
 .service {
-  background-color: #e5e5e5;
+  background-image: linear-gradient(#ffffff 100px,  #e5e5e5 100px);
 }
 
 .lower-slider-container {
-  padding-top: 80px;
-  padding-bottom: 70px;
+  padding-top: 60px;
+  padding-bottom: 119px;
   display: flex;
+  justify-content: flex-start;
 }
 
 .lower-toggles {
-  width: 290px;
-  margin-right: auto;
+  position: relative;
+
+  width: 280px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
+}
+
+.lower-toggles .lower-toggle-button {
+  padding-top: 7px;
+  padding-left: 20px;
+  padding-bottom: 7px;
+  padding-right: 16px;
+  margin-right: 115px;
+  margin-bottom: 18px;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  background-color: #E5E5E5;
+  background-image: linear-gradient(#E5E5E5 18px, #f0c52e 18px, #f0c52e 26px, #E5E5E5 26px);
+}
+
+.lower-toggle-button:first-child {
+  background-image: linear-gradient(#ffffff 20px, #E5E5E5 20px, #f0c52e 20px, #f0c52e 26px, #E5E5E5 26px);
 }
 
 .lower-slider {
@@ -385,20 +839,56 @@ a {
   padding: 0;
 }
 
-.lower-toggles .lower-toggle-button:active {
-  color: #f7e184;
+.lower-toggles::after {
+  position: absolute;
+  left: 277px;
+  top: -60px;
+
+  content: "";
+  width: 7px;
+  height: 319px;
 
   background-color: #000000;
 }
 
+.lower-toggle-button:nth-child(2) {
+  padding-left: 25px;
+  margin-bottom: 21px;
+}
+
+.lower-toggle-button:last-child {
+  padding-left: 37px;
+}
+
+.lower-toggles .lower-toggle-button:hover {
+  background-image: none;
+  background-color: #f0c52e;
+}
+
+.lower-toggles .lower-toggle-button:active {
+  color: #f7e184;
+
+  background-color: #000000;
+  box-shadow: 120px 0px 0px 0px #000000; /*Эти кнопки под 0 пришлось переделывать,
+но я очень рад что это сделал, т.к. сделал нормально +
+вспомнил про тени, чем тоже был себе приятно удивлен :)*/
+  background-image: none;
+}
 .lower-slide-description {
-  width: 760px;
+  width: 450px;
+  padding-right: 390px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-left: 125px;
 }
 
 .lower-slide-description h3 {
   margin: 0;
+  margin-bottom: 40px;
+  padding-top: 2px;
+  padding-left: 2px;
 
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
 }
 
@@ -408,66 +898,229 @@ a {
   font-weight: 300;
 }
 
+.lower-slider .lower-slide-1 {
+  background-image: url("../img/delivery.svg");
+  background-repeat: no-repeat;
+  background-position: 683px 25px;
+}
+
+.lower-slider .lower-slide-2 {
+  background-image: url("../img/warranty.svg");
+  background-repeat: no-repeat;
+  background-position: 683px 1px;
+}
+
+.lower-slider .lower-slide-3 {
+  background-image: url("../img/credit.svg");
+  background-repeat: no-repeat;
+  background-position: 683px 1px;
+}
+
 /*== BRANDS == */
 
 .brands-list {
+  position: relative;
+  left: -1px;  /*Откуда-то этот 1 пикcель взялся не пойму, мб из-за стилизации кнопок,
+  которой занялся в последнюю очередь. Пришлось позиционировать контейнеры и сдвигать на
+  1 пиксель в нескольких местах*/
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 95px;
+  margin-top: 105px;
   margin-bottom: 100px;
+  margin-left: 65px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .brands-item {
   opacity: 0.2;
 }
 
+.brands-item:hover {
+  opacity: 1;
+}
+
+.brands-item:nth-child(1) img {
+  margin-top: 1px;
+}
+
+.brands-item:nth-child(2) img {
+  margin-left: 109px;
+}
+
+.brands-item:nth-child(3) img {
+  margin-left: 76px;
+}
+
+.brands-item:nth-child(4) img {
+  margin-top: 8px;
+  margin-left: 105px;
+}
+
+.brands-item:nth-child(1) a:hover::before {
+  content: "";
+  width: 127px;
+  height: 74px;
+  position: absolute;
+
+  background-image: url("../img/logo-dji-hover.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 1px;
+}
+
+.brands-item:nth-child(2) a:hover::before {
+  content: "";
+  width: 400px;
+  height: 100px;
+  position: absolute;
+
+  background-image: url("../img/logo-sp-gadgets-hover.jpg");
+  background-repeat: no-repeat;
+  background-position: 109px 0px;
+}
+
+.brands-item:nth-child(3) a:hover::before {
+  content: "";
+  width: 400px;
+  height: 100px;
+  position: absolute;
+
+  background-image: url("../img/logo-gopro-hover.jpg");
+  background-repeat: no-repeat;
+  background-position: 76px 0px;
+}
+
+.brands-item:nth-child(4) a:hover::before {
+  content: "";
+  width: 400px;
+  height: 100px;
+  position: absolute;
+
+  background-image: url("../img/logo-vive-hover.jpg");
+  background-repeat: no-repeat;
+  background-position: 105px 8px;
+}
+
 /*== REFERENCE BLOCK ==*/
 
 .reference-block {
-  margin-bottom: 70px;
+  margin-bottom: 77px;
   display: flex;
+}
+
+.reference-block h2::before {
+  position: absolute;
+  top: -61px;
+  left: 1px;
+
+  content: "";
+  width: 80px;
+  height: 7px;
+
+  background-color: #000000;
+}
+
+.reference-block h2 {
+  position: relative;
+
+  margin-top: 60px;
+}
+
+.reference-block p {
+  padding-top: 13px;
+  padding-right: 40px;
 }
 
 /*== ABOUT US ==*/
 
 .about-us {
+  position: relative;
+  left: -1px;
+
   width: 600px;
 }
 
 .about-us h2 {
-  font-family: "Gilroy";
+
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
 }
 
 .about-us p {
+  padding-right: 113px;
+  padding-bottom: 2px;
+
   line-height: 30px;
   color: #464646;
   font-weight: 300;
 }
 
-
-
-.about-us-partners { /*Пока их убрал, но нужно будет подобрать и сделать  */
+.about-us-partners {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 64px;
+  margin-bottom: 52px;
+  padding-left: 36px;
+}
+
+.about-us-partners li::before {
+  /*ААААА! В общем суть в чем: я сделал свг для кружков слева от списка партнеров,
+  вставил псевдоэлементом и все было ок, но уже когда спать шел обнаружил что их нет!
+  Я мучился минут 40, в итоге вставил тупо эту свг в код и они ПОЯВИЛИСЬ!
+  потом я ее удалил, но они на месте остались. Я хз че это за баг такой, расскажешь? :)
+  Закрыл файл, открыл - та же фигня, вставил свг опять в код, опять появились...
+*/
+  position: absolute;
+  top: 16px;
+  left: -34px;
+
+  content: "";
+  width: 8px;
+  height: 8px;
+
+  background-image: url("../img/list-style-circle.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+
+.about-us-partners li:nth-child(2)::before {
+  position: absolute;
+  top: 17px;
+  left: -34px;
+
+  content: "";
+  width: 18px;
+  height: 18px;
+
+  background-image: url("../img/list-style-circle.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .about-us-partners li {
-  font-family: "Gilroy";
+  position: relative;
+
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
   line-height: 40px;
+}
+
+.about-us-button {
+  padding-left: 23px;
+  padding-right: 20px;
 }
 
 /*== CONTACTS == */
 
 .contacts {
-  width: 560px;
+  width: 563px;
 }
 
 .contacts h2 {
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
 }
 
@@ -475,6 +1128,23 @@ a {
   line-height: 30px;
   color: #464646;
   font-weight: 300;
+}
+
+.contacts img {
+  margin-top: 24px;
+  margin-left: 4px;
+  margin-bottom: 58px;
+}
+
+.contacts-button {
+  /*display: inline-block;*/
+  padding-left: 35px;
+  padding-right: 36px;
+  margin-left: 4px;
+}
+
+.contacts-button span {
+  padding-left: 5px;
 }
 
 /*== MODAL == */
@@ -487,16 +1157,73 @@ a {
   width: 960px;
 }
 
+.modal-container {
+  position: relative;
+
+  box-shadow: 0px 10px 20px 0px rgba(4, 6, 6, 0.2);
+}
+
+.modal-close {
+position: absolute;
+top: 30px;
+right: 30px;
+
+padding: 0;
+margin: 0;
+
+background-color: inherit;
+border: none;
+}
+
+.modal-close svg {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+.write-us-form-container {
+  margin-top: 95px;
+  margin-bottom: 75px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
 .write-us-form label {
-  font-family: "Gilroy";
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 18px;
 }
 
 .write-us-form input,
 .write-us-form textarea {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  margin-top: 10px;
+
   background-color: #e5e5e5;
   opacity: 0.5;
+
+  border: none;
+}
+
+.write-us-form textarea {
+  height: 160px;
+  margin-bottom: 40px;
+}
+
+.form-upper-container {
+  display: flex;
+  width: 760px;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.form-upper-container label {
+  width: 360px;
 }
 
 .write-us-form input:hover,
@@ -530,6 +1257,31 @@ a {
   opacity: 1;
 }
 
+.write-us-submit {
+  background-color: #f0c52e;
+  background-image: linear-gradient(#ffffff 14px, #f0c52e 14px, #f0c52e 21px, #ffffff 21px);
+  border: none;
+}
+
+/*== MODAL POP-UP-MAP ==*/
+
+.modal-popup-map {
+  position: relative;
+}
+
+.modal-popup-map .modal-close {
+position: absolute;
+top: 27px;
+right: 41px;
+
+padding: 0;
+margin: 0;
+
+background-color: inherit;
+opacity: 0.5;
+border: none;
+}
+
 /*== CATALOG [PAGE] ==*/
 
 /*== CATALOG. MAIN ==*/
@@ -543,7 +1295,7 @@ a {
   margin-top: 40px;
   margin-bottom: 35px;
 
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
 }
 
@@ -562,7 +1314,6 @@ a {
   font-weight: 300;
 
   opacity: 0.3;
-
 }
 
 .breadcrumbs a:hover {
@@ -592,7 +1343,7 @@ a {
 .filters h2 {
   margin: 0;
 
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -606,7 +1357,7 @@ a {
 
 .filters-form .range-name,
 .filters-form legend {
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
 }
 
@@ -639,7 +1390,7 @@ a {
 .catalog h2 {
   margin: 0;
 
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -697,29 +1448,35 @@ a {
   list-style: none;
   margin: 0;
   padding: 70px;
+  padding-bottom: 40px;
   width: 815px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .catalog-item {
-  width: 360px;
-  margin-bottom: 75px;
+  margin-bottom: 50px;
   margin-right: 40px;
 }
+
+.catalog-item:nth-child(3),
+.catalog-item:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
 
 .catalog-item img:hover {
   opacity: 0.7;
 }
 
 .catalog-item a {
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   color: #000000;
 }
 
 .catalog-item .catalog-price {
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
   color: #464646;
   font-weight: 400;
@@ -757,6 +1514,7 @@ a {
   width: 815px;
   margin-left: 70px;
   margin-bottom: 70px;
+  margin-top: 0;
   display: flex;
   justify-content: space-between;
 
@@ -780,7 +1538,7 @@ a {
 
 .paginator-item a,
 .paginator-btn {
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
   color: #000000;
   letter-spacing: 0.2em;
