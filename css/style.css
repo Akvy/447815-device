@@ -262,16 +262,21 @@ a {
 }
 
 .header-dropping-list {
+  display: none;
+}
+
+.header-service-link:hover + .header-dropping-list {
   position: absolute;
-  top: 199px;
-  left: 140px;
+  top: 50px;
+  left: -55px;
+  z-index: 5;
 
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
-  height: 140px;
   width: 1160px;
+  height: 140px;
 
   background-color: #F7E296;
 }
@@ -280,13 +285,14 @@ a {
     flex-basis: 40px;
 }
 
+.header-dropping-list .row-1,
 .header-dropping-list .row-2 {
   margin-left: 60px;
 }
 
 .header-dropping-list .row-3 {
   flex-basis: 65px;
-  margin-left: 80px;
+  margin-left: 75px;
 }
 
 .header-user-links a,
@@ -295,7 +301,10 @@ a {
   color: #000000;
   text-transform: none;
   font-weight: 300;
-  /*letter-spacing: 0;*/
+}
+
+.header-dropping-list a {
+    letter-spacing: 0.1px;
 }
 
 .header-service-links {
@@ -308,7 +317,7 @@ a {
   margin-bottom: 20px;
 }
 
-.header-service-links a {
+.header-service-links > a {
   font-size: 17px;
   letter-spacing: 0.25em;
 }
@@ -317,8 +326,7 @@ a {
   position: relative;
 }
 
-.header-service-links li:first-child::after { /*Этот плюсик нужно оживлять при ховере,
-  но я пока этого не сделал. Мне попробовать это сделать или дождаться вебинара соответсвующего?)*/
+.header-service-links > li:first-child::after {
   position: absolute;
   top: 2px;
   left: 230px;
@@ -333,15 +341,15 @@ a {
   opacity: 0.3;
 }
 
-.header-service-links li:nth-child(2) {
+.header-service-links > li:nth-child(2) {
   margin-left: 318px;
 }
 
-.header-service-links li:nth-child(3) {
+.header-service-links > li:nth-child(3) {
   margin-left: 30px;
 }
 
-.header-service-links li:nth-child(4) {
+.header-service-links > li:nth-child(4) {
   margin-left: 104px;
 }
 
@@ -582,10 +590,10 @@ a {
   position: relative;
 
   padding-right: 50px;
-  padding-top: 28px;
+  padding-top: 29px;
   margin: 0;
 
-  background-image: linear-gradient(#F7E296 139px, #ffffff 139px);
+  background-image: linear-gradient(#F7E296 140px, #ffffff 140px);
 }
 
 .slide-1 img {
@@ -619,7 +627,7 @@ a {
 
   width: 512px;
   margin-left: auto;
-  padding-top: 80px;
+  padding-top: 79px;
 }
 
 .upper-slider b {
@@ -647,7 +655,7 @@ a {
 .description-container b::before {
   position: absolute;
   top: 37px;
-  left: 1px;
+  left: 2px;
 
   content: "";
   width: 100px;
@@ -657,7 +665,7 @@ a {
 }
 
 .description-container .item-description {
-  padding-top: 3px;
+  padding-top: 4px;
   padding-bottom: 26px;
   padding-left: 1px;
 
@@ -1071,6 +1079,9 @@ a {
   position: relative;
 
   margin-top: 60px;
+
+  font-size: 46px;
+  letter-spacing: 1.3px;
 }
 
 .reference-block p {
@@ -1096,6 +1107,7 @@ a {
 
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
+  letter-spacing: 0;
 }
 
 .about-us p {
