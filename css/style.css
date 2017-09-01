@@ -265,9 +265,10 @@ a {
   display: none;
 }
 
-.header-service-link:hover + .header-dropping-list {
+.header-service-link:hover + .header-dropping-list,
+.header-dropping-list:hover {
   position: absolute;
-  top: 50px;
+  top: 25px;
   left: -55px;
   z-index: 5;
 
@@ -275,14 +276,15 @@ a {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
+  padding-top: 20px;
   width: 1160px;
-  height: 140px;
+  height: 145px;
 
   background-color: #F7E296;
 }
 
 .header-dropping-list li {
-    flex-basis: 40px;
+  flex-basis: 45px;
 }
 
 .header-dropping-list .row-1,
