@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: "Gilroy";
-    src: url("../fontsfonts/gilroylight.woff2") format("woff2");
+    src: url("../fonts/gilroylight.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
@@ -42,7 +42,6 @@ body {
   line-height: 30px;
   font-weight: bold;
   color: #000000;
-  letter-spacing: 0.01em;
 
   background-color: #ffffff;
 }
@@ -59,12 +58,12 @@ a {
   padding-right: 40px;
 
   font-family: "Gilroy", Arial, sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
   color: #000000;
   vertical-align: middle;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 4.25px;
 
   background-color: #f0c52e;
   background-image: linear-gradient(#ffffff 19px, #f0c52e 19px, #f0c52e 26px, #ffffff 26px);
@@ -103,9 +102,11 @@ a {
   margin-bottom: 25px;
   margin-left: 2px;
 
+
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 48px;
   color: #000000;
+  letter-spacing: 0.5px;
 }
 
 .search-form-container {
@@ -157,6 +158,7 @@ a {
   line-height: 36px;
   color: #000000;
   font-weight: 300;
+  letter-spacing: 0.4px;
 
   background-color: inherit;
   opacity: 0.3;
@@ -211,7 +213,7 @@ a {
 }
 
 .header-user-links li:nth-child(2) {
-  margin-left: 207px;
+  margin-left: 208px;
 }
 
 .header-user-links li:nth-child(3) {
@@ -228,6 +230,10 @@ a {
   height: 25px;
 
   opacity: 1;
+}
+
+.header-user-link a {
+  letter-spacing: 0.1px;
 }
 
 .header-user-link:first-child a::before {
@@ -302,6 +308,11 @@ a {
   margin-bottom: 20px;
 }
 
+.header-service-links a {
+  font-size: 17px;
+  letter-spacing: 0.25em;
+}
+
 .header-service-links li:first-child {
   position: relative;
 }
@@ -331,7 +342,7 @@ a {
 }
 
 .header-service-links li:nth-child(4) {
-  margin-left: 105px;
+  margin-left: 104px;
 }
 
 .header-service-link {
@@ -388,7 +399,6 @@ a {
 }
 
 .footer-left-part p {
-  margin-left: -1px;
   margin-top: 31px;
 }
 
@@ -415,6 +425,7 @@ a {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 48px;
   color: #ffc600;
+  letter-spacing: 0.5px;
 }
 
 .footer-left-part::after {
@@ -469,6 +480,7 @@ a {
   line-height: 36px;
   color: #ffffff;
   font-weight: 300;
+  letter-spacing: 0.15px;
 
   opacity: 0.7;
 }
@@ -520,7 +532,7 @@ a {
 
 .phone {
   margin-top: 34px;
-  width: 354px;
+  width: 351px;
 }
 
 .footer-service-links a {
@@ -570,10 +582,10 @@ a {
   position: relative;
 
   padding-right: 50px;
-  padding-top: 29px;
+  padding-top: 28px;
   margin: 0;
 
-  background-image: linear-gradient(#F7E296 140px, #ffffff 140px);
+  background-image: linear-gradient(#F7E296 139px, #ffffff 139px);
 }
 
 .slide-1 img {
@@ -605,18 +617,18 @@ a {
   position: relative;
   z-index: 0;
 
-  width: 511px;
+  width: 512px;
   margin-left: auto;
-  padding-top: 82px;
+  padding-top: 80px;
 }
 
 .upper-slider b {
+  margin-left: 1px;
+
   font-family: "Gilroy", Arial, sans-serif;
-  font-size: 47px;
-  line-height: 55px; /*Здесь вообще интересно: в фотошопе говорят,
-  что межстрочное расстояние авто, а на макете при этом оно явно не авто ))
-  Подобрал, но все же хрень какая-то со шрифтами, они везде пляшут и расстраивают меня)
-  Посмотри, пожалуйста, где я с ними накосячил, чтобы можно было сделать уже нормально с нормальными шрифтами)*/
+  font-size: 46px;
+  line-height: 56px;
+  letter-spacing: 1.25px;
 }
 
 .description-container .slide-number {
@@ -626,7 +638,7 @@ a {
   z-index: -1;
 
   font-family: "Gilroy", Arial, sans-serif;
-  font-size: 179.2px;
+  font-size: 178.5px;
   color: #ffffff;
 
   background-color: #f7e296;
@@ -646,12 +658,21 @@ a {
 
 .description-container .item-description {
   padding-top: 3px;
-  padding-bottom: 25px;
+  padding-bottom: 26px;
+  padding-left: 1px;
+
   width: 490px;
 
   line-height: 30px;
   color: #464646;
   font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+.slide-button {
+  margin-left: 1px;
+  padding-left: 45px;
+  padding-right: 39px;
 }
 
 .slide-2 .item-description {
@@ -663,17 +684,21 @@ a {
 }
 
 .slide-table {
-  padding-top: 53px;
+  padding: 0;
+  margin: 0;
+  padding-top: 52px;
 }
 
 .slide-table th,
 .slide-table td {
-  padding-right: 65px;
+  padding-right: 74px;
+
+  letter-spacing: 0.2px;
 }
 
 .slide-table th:nth-child(2),
 .slide-table td:nth-child(2){
-  padding-right: 75px;
+  padding-right: 73px;
 }
 
 .slide-table th:last-child,
@@ -702,7 +727,7 @@ a {
   position: relative;
   left: -1px;
 
-  padding-top: 168px;
+  padding-top: 165px;
 }
 
 .item-groups {
@@ -723,7 +748,7 @@ a {
 
 .item-group-container a::before {
   position: absolute;
-  top: -191px;
+  top: -194px;
   left: 1px;
 
   content: "";
@@ -735,36 +760,36 @@ a {
 
 .item-group:nth-child(1) svg {
   position: absolute;
-  top: -217px;
+  top: -204px;
   left: 32px;
 }
 
 .item-group:nth-child(2) svg {
   position: absolute;
-  top: -228px;
+  top: -215px;
   left: 39px;
 }
 .item-group:nth-child(3) svg {
   position: absolute;
-  top: -201px;
+  top: -196px;
   left: 50px;
 }
 
 .item-group:nth-child(4) svg {
   position: absolute;
-  top: -219px;
+  top: -184px;
   left: 29px;
 }
 
 .item-group:nth-child(5) svg {
   position: absolute;
-  top: -207px;
+  top: -202px;
   left: 56px;
 }
 
 .item-group:nth-child(6) svg {
   position: absolute;
-  top: -190px;
+  top: -185px;
   left: 14px;
 }
 
@@ -782,6 +807,21 @@ a {
   background-color: #F0C52E;
 }
 
+.item-class-description {
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 25px;
+  letter-spacing: 0.012em;
+}
+
+.item-class-second-description {
+  width: 120px;
+}
+
+.item-class-fourth-description {
+  white-space: nowrap;
+}
+
 .item-class-description:active,
 .item-group svg:active { /*Здесь сделал, но нажатие по отдельности работает, так и должно быть? :)*/
   opacity: 0.3;
@@ -790,11 +830,11 @@ a {
 /*== SERVICE ==*/
 
 .service {
-  background-image: linear-gradient(#ffffff 100px,  #e5e5e5 100px);
+  background-image: linear-gradient(#ffffff 113px,  #e5e5e5 113px);
 }
 
 .lower-slider-container {
-  padding-top: 60px;
+  padding-top: 73px;
   padding-bottom: 119px;
   display: flex;
   justify-content: flex-start;
@@ -837,6 +877,11 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.lower-slider .lower-slide-header {
+  font-size: 46px;
+  letter-spacing: 1.4px;
 }
 
 .lower-toggles::after {
@@ -896,6 +941,7 @@ a {
   line-height: 30px;
   color: #464646;
   font-weight: 300;
+  letter-spacing: 0.26px
 }
 
 .lower-slider .lower-slide-1 {
@@ -1012,7 +1058,7 @@ a {
 .reference-block h2::before {
   position: absolute;
   top: -61px;
-  left: 1px;
+  left: 3px;
 
   content: "";
   width: 80px;
@@ -1030,6 +1076,7 @@ a {
 .reference-block p {
   padding-top: 13px;
   padding-right: 40px;
+  letter-spacing: 0.1px;
 }
 
 /*== ABOUT US ==*/
@@ -1039,6 +1086,10 @@ a {
   left: -1px;
 
   width: 600px;
+}
+
+.about-us h2::before {
+  left: 1px;
 }
 
 .about-us h2 {
@@ -1106,6 +1157,7 @@ a {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
   line-height: 40px;
+  letter-spacing: 0.15px;
 }
 
 .about-us-button {
@@ -1122,6 +1174,7 @@ a {
 .contacts h2 {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
+  letter-spacing: 0.8px;
 }
 
 .contacts p {
@@ -1132,12 +1185,11 @@ a {
 
 .contacts img {
   margin-top: 24px;
-  margin-left: 4px;
+  margin-left: 3px;
   margin-bottom: 58px;
 }
 
 .contacts-button {
-  /*display: inline-block;*/
   padding-left: 35px;
   padding-right: 36px;
   margin-left: 4px;
@@ -1314,6 +1366,7 @@ border: none;
   font-weight: 300;
 
   opacity: 0.3;
+
 }
 
 .breadcrumbs a:hover {
