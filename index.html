@@ -18,14 +18,17 @@
           <div class="main-header-upper-container">
             <div class="upper-container-left-part">
               <form class="search-form" action="index.html" method="get">
-                <label class="search-form-container">
+                <div class="search-form-container">
                   <span class="visually-hidden">Окно поиска</span>
-                  <input type="search" name="search-form" placeholder="Поиск по сайту">
-                </label>
+
+                  <input type="search" class="search-input" name="search-form" placeholder="Поиск по сайту">
+
+                  <button type="button" class="search-button">
+                    <span>Найти</span>
+                  </button>
+                </div>
               </form>
-              <button type="button" class="button search-button visually-hidden"> <!-- тут наверное через js нужно кнопке задавать отображение? Пока ее скрыл -->
-                <span>Найти</span>
-              </button>
+
             </div>
 
             <ul class="header-user-links">
@@ -91,26 +94,9 @@
         <input type="radio" class="visually-hidden" name="upper-toggle" id="upper-toggle-2">
         <input type="radio" class="visually-hidden" name="upper-toggle" id="upper-toggle-3">
 
-        <div class="upper-toggles visually-hidden">
-          <label for="upper-toggle-1">
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 23 23">
-              <path d="M11.5 2c5.238 0 9.5 4.262 9.5 9.5S16.738 21 11.5 21 2 16.738 2 11.5 6.262 2 11.5 2m0-2C5.149 0 0 5.149 0 11.5 0 17.852 5.149 23 11.5 23 17.852 23 23 17.852 23 11.5 23 5.149 17.852 0 11.5 0z"/>
-              <path d="M11.5 9.004a2.5 2.5 0 0 1 2.496 2.496 2.5 2.5 0 0 1-2.496 2.496A2.5 2.5 0 0 1 9.004 11.5 2.5 2.5 0 0 1 11.5 9.004m0-2a4.496 4.496 0 1 0 0 8.992 4.496 4.496 0 0 0 0-8.992z"/>
-            </svg>
-
-          </label>
-          <label for="upper-toggle-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 23 23">
-              <path d="M11.5 2c5.238 0 9.5 4.262 9.5 9.5S16.738 21 11.5 21 2 16.738 2 11.5 6.262 2 11.5 2m0-2C5.149 0 0 5.149 0 11.5 0 17.852 5.149 23 11.5 23 17.852 23 23 17.852 23 11.5 23 5.149 17.852 0 11.5 0z"/>
-            </svg>
-          </label>
-          <label for="upper-toggle-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 23 23">
-              <path d="M11.5 2c5.238 0 9.5 4.262 9.5 9.5S16.738 21 11.5 21 2 16.738 2 11.5 6.262 2 11.5 2m0-2C5.149 0 0 5.149 0 11.5 0 17.852 5.149 23 11.5 23 17.852 23 23 17.852 23 11.5 23 5.149 17.852 0 11.5 0z"/>
-            </svg>
-          </label>
-        </div>
-
+        <label class="upper-toggle upper-toggle-1" for="upper-toggle-1"></label>
+        <label class="upper-toggle upper-toggle-2" for="upper-toggle-2"></label>
+        <label class="upper-toggle upper-toggle-3" for="upper-toggle-3"></label>
 
         <ul class="upper-slider">
           <li class="slide-1">
@@ -143,7 +129,7 @@
               </table>
             </div> <!-- end description-container -->
           </li> <!-- end slide-1 -->
-          <li class="slide-2 visually-hidden">
+          <li class="slide-2">
             <img src="img/slider-fitness.png" alt="Мотивирующий фитнес-браслет" width="370" height="500">
 
             <div class="description-container">
@@ -168,7 +154,7 @@
             </div> <!-- end description-container -->
           </li> <!-- end slide-2 -->
 
-          <li class="slide-3 visually-hidden">
+          <li class="slide-3">
             <img src="img/slider-quadrocopter.png" alt="Квадрокоптер с лазером" width="535" height="330">
 
             <div class="description-container">
@@ -286,16 +272,14 @@
         <div class="container">
           <h2 class="visually-hidden">Преимущества</h2>
 
-          <input type="radio" class="visually-hidden" name="lower-toggle" id="lower-toggle-1" checked>
-          <input type="radio" class="visually-hidden" name="lower-toggle" id="lower-toggle-2">
-          <input type="radio" class="visually-hidden" name="lower-toggle" id="lower-toggle-3">
-
           <div class="lower-slider-container">
-            <div class="lower-toggles">
-              <label class="lower-toggle-button" for="lower-toggle-1">Доставка</label><!-- Так как не справился со слайдером, не стал их стилизовать, чтобы потом не переделывать. -->
-              <label class="lower-toggle-button" for="lower-toggle-2">Гарантия</label>
-              <label class="lower-toggle-button" for="lower-toggle-3">Кредит</label>
-            </div>
+            <input type="radio" class="visually-hidden" name="lower-toggle" id="lower-toggle-1" checked>
+            <input type="radio" class="visually-hidden" name="lower-toggle" id="lower-toggle-2">
+            <input type="radio" class="visually-hidden" name="lower-toggle" id="lower-toggle-3">
+
+            <label class="lower-toggle-button" for="lower-toggle-1">Доставка</label>
+            <label class="lower-toggle-button" for="lower-toggle-2">Гарантия</label>
+            <label class="lower-toggle-button" for="lower-toggle-3">Кредит</label>
 
             <ul class="lower-slider">
               <li class="lower-slide-1">
@@ -304,7 +288,7 @@
                   <p class="advantage-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
                 </div>
               </li>
-              <li class="lower-slide-2 hide-from-view">
+              <li class="lower-slide-2">
                 <div class="lower-slide-description">
                   <h3 class="lower-slide-header">Гарантия</h3>
                   <p class="advantage-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
@@ -312,7 +296,7 @@
                     Товар, не дом, конечно же.</p>
                 </div>
               </li>
-              <li class="lower-slide-3 hide-from-view">
+              <li class="lower-slide-3">
                 <div class="lower-slide-description">
                   <h3 class="lower-slide-header">Кредит</h3>
                   <p class="advantage-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>

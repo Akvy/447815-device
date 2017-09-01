@@ -66,7 +66,7 @@ a {
   letter-spacing: 4.25px;
 
   background-color: #f0c52e;
-  background-image: linear-gradient(#ffffff 19px, #f0c52e 19px, #f0c52e 26px, #ffffff 26px);
+  background-image: linear-gradient(#ffffff 18px, #f0c52e 18px, #f0c52e 26px, #ffffff 26px);
 }
 
 .button:hover,
@@ -115,7 +115,7 @@ a {
 
 .search-form-container::after {
   position: absolute;
-  top: 3px;
+  top: 10px;
   left: 7px;
 
   content: "";
@@ -134,6 +134,8 @@ a {
 }
 
 .upper-container-left-part {
+  position: relative;
+
   display: flex;
   justify-content: flex-start;
 }
@@ -177,18 +179,32 @@ a {
 }
 
 .search-button {
+  display: none;
+}
+
+.search-input:focus ~ .search-button,
+.search-button:hover,
+.search-button:active {
+  display: block;
+
+  position: absolute;
+  top: 0px;
+  left: 355px;
+
+  width: 85px;
+  height: 50px;
+
   font-size: 15px;
   line-height: 36px;
   color: #000000;
   text-transform: none;
   font-weight: 300;
-  /*letter-spacing: 0.01em;*/
 
   background-color: #f7e296;
   border: 2px solid #000000;
 }
 
-.search-button:hover {
+.search-form-container .search-button:hover {
   color: #ffffff;
 
   background-color: #000000;
@@ -312,16 +328,16 @@ a {
 .header-service-links {
   margin: 0;
   padding: 0;
-  width: 1105px;
+  width: 1050px;
   display: flex;
   flex-wrap: wrap;
   margin-top: 21px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
-.header-service-links > a {
+.header-service-links .header-service-link {
   font-size: 17px;
-  letter-spacing: 0.25em;
+  letter-spacing: 4.25px;
 }
 
 .header-service-links li:first-child {
@@ -588,6 +604,10 @@ a {
 
 /*== PROMO-DESCRIPTION ==*/
 
+.promo-description {
+  position: relative;
+}
+
 .upper-slider {
   position: relative;
 
@@ -596,6 +616,60 @@ a {
   margin: 0;
 
   background-image: linear-gradient(#F7E296 140px, #ffffff 140px);
+}
+
+.promo-description label {
+
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  box-shadow: 0px 0px 0px 1px #000000;
+  border-radius: 50%;
+
+  background-color: #ffffff;
+}
+
+.promo-description .upper-toggle {
+  position: absolute;
+  z-index: 6;
+  top: 357px;
+  right: 150px;
+}
+
+.promo-description .upper-toggle-2 {
+  right: 117px;
+}
+
+.promo-description .upper-toggle-3 {
+  right: 84px;
+}
+
+.upper-slider li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+#upper-toggle-1:checked ~ label[for="upper-toggle-1"],
+#upper-toggle-2:checked ~ label[for="upper-toggle-2"],
+#upper-toggle-3:checked ~ label[for="upper-toggle-3"] {
+  background-image: url("../img/slider-button.svg");
+  background-repeat: no-repeat;
+  background-position: -1px -1px;
+}
+
+#upper-toggle-1:checked ~ .upper-slider .slide-1 {
+  display: flex;
+}
+
+#upper-toggle-2:checked ~ .upper-slider .slide-2 {
+  display: flex;
+}
+
+#upper-toggle-3:checked ~ .upper-slider .slide-3 {
+  display: flex;
 }
 
 .slide-1 img {
@@ -614,13 +688,6 @@ a {
   position: relative;
   top: 65px;
   left: -8px;
-}
-
-.upper-slider li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
 }
 
 .description-container {
@@ -697,6 +764,7 @@ a {
   padding: 0;
   margin: 0;
   padding-top: 52px;
+  margin-bottom: 50px;
 }
 
 .slide-table th,
@@ -737,7 +805,7 @@ a {
   position: relative;
   left: -1px;
 
-  padding-top: 165px;
+  padding-top: 120px;
 }
 
 .item-groups {
@@ -807,9 +875,7 @@ a {
   position: relative;
 
   font-family: "Gilroy", Arial, sans-serif;
-  font-size: 16px; /*здесь вообще 16 размер шрифта подошел, хотя по фотошопу 18..
-  и лайнхай подбирать опять. Я его подбирать сознательно не стал, т.к. думаю когда
-  шрифты починим и не придется)*/
+  font-size: 16px;
   color: #000000;
 }
 
@@ -833,7 +899,7 @@ a {
 }
 
 .item-class-description:active,
-.item-group svg:active { /*Здесь сделал, но нажатие по отдельности работает, так и должно быть? :)*/
+.item-group svg:active {
   opacity: 0.3;
 }
 
@@ -844,43 +910,67 @@ a {
 }
 
 .lower-slider-container {
+  position: relative;
+
   padding-top: 73px;
-  padding-bottom: 119px;
+  padding-bottom: 121px;
   display: flex;
   justify-content: flex-start;
 }
 
-.lower-toggles {
-  position: relative;
+.lower-slider-container .lower-toggle-button {
+  position: absolute;
+  top: 0;
 
-  width: 280px;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.lower-toggles .lower-toggle-button {
-  padding-top: 7px;
+  padding-top: 6px;
+  padding-bottom: 4px;
   padding-left: 20px;
-  padding-bottom: 7px;
   padding-right: 16px;
-  margin-right: 115px;
-  margin-bottom: 18px;
 
   font-family: "Gilroy", Arial, sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
   color: #000000;
   vertical-align: middle;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 4.3px;
 
   background-color: #E5E5E5;
-  background-image: linear-gradient(#E5E5E5 18px, #f0c52e 18px, #f0c52e 26px, #E5E5E5 26px);
+  background-image: linear-gradient(#E5E5E5 16px, #f0c52e 16px, #f0c52e 24px, #E5E5E5 24px);
 }
 
-.lower-toggle-button:first-child {
-  background-image: linear-gradient(#ffffff 20px, #E5E5E5 20px, #f0c52e 20px, #f0c52e 26px, #E5E5E5 26px);
+.lower-slider-container .lower-toggle-button:nth-of-type(1) {
+  top: 93px;
+
+  background-image: linear-gradient(#ffffff 16px, #f0c52e 16px, #f0c52e 20px, #E5E5E5 20px, #f0c52e 20px, #f0c52e 24px, #E5E5E5 24px);
+}
+
+.lower-slider-container .lower-toggle-button:nth-of-type(2) {
+  top: 157px;
+
+  padding-left: 25px;
+  padding-right: 20px;
+  margin-bottom: 21px;
+}
+
+.lower-slider-container .lower-toggle-button:nth-of-type(3) {
+  top: 222px;
+
+  padding-left: 37px;
+  padding-right: 35px;
+}
+
+#lower-toggle-1:checked ~ label[for="lower-toggle-1"],
+#lower-toggle-2:checked ~ label[for="lower-toggle-2"],
+#lower-toggle-3:checked ~ label[for="lower-toggle-3"] {
+  padding-top: 6px;
+  padding-bottom: 4px;
+
+  color: #f7e184;
+
+  background-color: #000000;
+  box-shadow: 120px 0px 0px 0px #000000;
+  background-image: none;
 }
 
 .lower-slider {
@@ -894,10 +984,10 @@ a {
   letter-spacing: 1.4px;
 }
 
-.lower-toggles::after {
+.lower-slider-container::after {
   position: absolute;
   left: 277px;
-  top: -60px;
+  top: 13px;
 
   content: "";
   width: 7px;
@@ -906,35 +996,20 @@ a {
   background-color: #000000;
 }
 
-.lower-toggle-button:nth-child(2) {
-  padding-left: 25px;
-  margin-bottom: 21px;
-}
+.lower-slider-container .lower-toggle-button:hover {
+  padding-top: 6px;
+  padding-bottom: 4px;
 
-.lower-toggle-button:last-child {
-  padding-left: 37px;
-}
-
-.lower-toggles .lower-toggle-button:hover {
   background-image: none;
   background-color: #f0c52e;
 }
 
-.lower-toggles .lower-toggle-button:active {
-  color: #f7e184;
-
-  background-color: #000000;
-  box-shadow: 120px 0px 0px 0px #000000; /*Эти кнопки под 0 пришлось переделывать,
-но я очень рад что это сделал, т.к. сделал нормально +
-вспомнил про тени, чем тоже был себе приятно удивлен :)*/
-  background-image: none;
-}
 .lower-slide-description {
   width: 450px;
-  padding-right: 390px;
   padding-top: 20px;
   padding-bottom: 10px;
-  margin-left: 125px;
+  padding-left: 400px;
+  padding-right: 390px;
 }
 
 .lower-slide-description h3 {
@@ -954,31 +1029,46 @@ a {
   letter-spacing: 0.26px
 }
 
+.lower-slider li {
+  display: none;
+}
+
+#lower-toggle-1:checked ~ .lower-slider .lower-slide-1 {
+  display: block;
+}
+
+#lower-toggle-2:checked ~ .lower-slider .lower-slide-2 {
+  display: block;
+}
+
+#lower-toggle-3:checked ~ .lower-slider .lower-slide-3 {
+  display: block;
+}
+
 .lower-slider .lower-slide-1 {
   background-image: url("../img/delivery.svg");
   background-repeat: no-repeat;
-  background-position: 683px 25px;
+  background-position: 958px 25px;
 }
 
 .lower-slider .lower-slide-2 {
   background-image: url("../img/warranty.svg");
   background-repeat: no-repeat;
-  background-position: 683px 1px;
+  background-position: 958px 1px;
 }
 
 .lower-slider .lower-slide-3 {
   background-image: url("../img/credit.svg");
   background-repeat: no-repeat;
-  background-position: 683px 1px;
+  background-position: 958px 1px;
 }
 
 /*== BRANDS == */
 
 .brands-list {
   position: relative;
-  left: -1px;  /*Откуда-то этот 1 пикcель взялся не пойму, мб из-за стилизации кнопок,
-  которой занялся в последнюю очередь. Пришлось позиционировать контейнеры и сдвигать на
-  1 пиксель в нескольких местах*/
+  left: -1px;
+  
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1176,7 +1266,8 @@ a {
 
 .about-us-button {
   padding-left: 23px;
-  padding-right: 20px;
+  padding-right: 18px;
+  margin-left: 1px;
 }
 
 /*== CONTACTS == */
@@ -1205,12 +1296,14 @@ a {
 
 .contacts-button {
   padding-left: 35px;
-  padding-right: 36px;
-  margin-left: 4px;
+  padding-right: 37px;
+  margin-left: 3px;
 }
 
 .contacts-button span {
   padding-left: 5px;
+
+  letter-spacing: 4.3px;
 }
 
 /*== MODAL == */
