@@ -51,11 +51,16 @@ a {
 }
 
 .button {
+  position: absolute;
+
   display: inline-block;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  height: 8px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   padding-left: 44px;
   padding-right: 40px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 17px;
@@ -64,16 +69,22 @@ a {
   vertical-align: middle;
   text-transform: uppercase;
   letter-spacing: 4.25px;
+  line-height: 9px;
 
   background-color: #f0c52e;
-  background-image: linear-gradient(#ffffff 18px, #f0c52e 18px, #f0c52e 26px, #ffffff 26px);
+
+  transition-duration: 150ms;
 }
 
 .button:hover,
 .button:focus,
 .button:active {
+  margin-top: -16px;
+  padding-top: 16px;
+  margin-bottom: -16px;
+  padding-bottom: 16px;
+
   background-color: #f0c52e;
-  background-image: none;
 }
 
 .button:active > span {
@@ -408,6 +419,8 @@ a {
 /*== FOOTER ==*/
 
 .main-footer {
+  padding-bottom: 65px;
+
   background-color: #464646;
 }
 
@@ -635,6 +648,8 @@ a {
   z-index: 6;
   top: 357px;
   right: 150px;
+
+  cursor: pointer;
 }
 
 .promo-description .upper-toggle-2 {
@@ -747,9 +762,13 @@ a {
 }
 
 .slide-button {
+  bottom: 194px;
+
   margin-left: 1px;
   padding-left: 45px;
   padding-right: 39px;
+
+  line-height: 9px;
 }
 
 .slide-2 .item-description {
@@ -763,7 +782,7 @@ a {
 .slide-table {
   padding: 0;
   margin: 0;
-  padding-top: 52px;
+  padding-top: 98px;
   margin-bottom: 50px;
 }
 
@@ -812,7 +831,7 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 110px;
+  margin-top: 10px;
   margin-bottom: 53px;
   display: flex;
   justify-content: space-between;
@@ -826,7 +845,7 @@ a {
 
 .item-group-container a::before {
   position: absolute;
-  top: -194px;
+  top: -69px;
   left: 1px;
 
   content: "";
@@ -838,41 +857,44 @@ a {
 
 .item-group:nth-child(1) svg {
   position: absolute;
-  top: -204px;
+  top: -17px;
   left: 32px;
 }
 
 .item-group:nth-child(2) svg {
   position: absolute;
-  top: -215px;
+  top: -28px;
   left: 39px;
 }
 .item-group:nth-child(3) svg {
   position: absolute;
-  top: -196px;
+  top: -31px;
   left: 50px;
 }
 
 .item-group:nth-child(4) svg {
   position: absolute;
-  top: -184px;
+  top: -19px;
   left: 29px;
 }
 
 .item-group:nth-child(5) svg {
   position: absolute;
-  top: -202px;
+  top: -37px;
   left: 56px;
 }
 
 .item-group:nth-child(6) svg {
   position: absolute;
-  top: -185px;
+  top: -20px;
   left: 14px;
 }
 
 .item-group-container a {
   position: relative;
+
+  display: block;
+  padding-top: 100px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
@@ -922,10 +944,14 @@ a {
   position: absolute;
   top: 0;
 
-  padding-top: 6px;
-  padding-bottom: 4px;
+
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
   padding-left: 20px;
   padding-right: 16px;
+  height: 8px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 17px;
@@ -933,28 +959,41 @@ a {
   color: #000000;
   vertical-align: middle;
   text-transform: uppercase;
+    line-height: 9px;
   letter-spacing: 4.3px;
 
   background-color: #E5E5E5;
   background-image: linear-gradient(#E5E5E5 16px, #f0c52e 16px, #f0c52e 24px, #E5E5E5 24px);
+
+  transition-property: all, box-shadow;
+  transition-duration: 150ms, 0ms;
+}
+
+.lower-toggle-button:hover {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-top: -16px;
+  margin-bottom: -16px;
+
+  background-image: none;
+  background-color: #f0c52e;
 }
 
 .lower-slider-container .lower-toggle-button:nth-of-type(1) {
-  top: 93px;
+  top: 109px;
 
-  background-image: linear-gradient(#ffffff 16px, #f0c52e 16px, #f0c52e 20px, #E5E5E5 20px, #f0c52e 20px, #f0c52e 24px, #E5E5E5 24px);
+  /*background-image: linear-gradient(#ffffff 16px, #f0c52e 16px, #f0c52e 20px, #E5E5E5 20px, #f0c52e 20px, #f0c52e 24px, #E5E5E5 24px);*/
 }
 
 .lower-slider-container .lower-toggle-button:nth-of-type(2) {
-  top: 157px;
+  top: 173px;
 
   padding-left: 25px;
   padding-right: 20px;
-  margin-bottom: 21px;
 }
 
 .lower-slider-container .lower-toggle-button:nth-of-type(3) {
-  top: 222px;
+  top: 238px;
 
   padding-left: 37px;
   padding-right: 35px;
@@ -963,8 +1002,10 @@ a {
 #lower-toggle-1:checked ~ label[for="lower-toggle-1"],
 #lower-toggle-2:checked ~ label[for="lower-toggle-2"],
 #lower-toggle-3:checked ~ label[for="lower-toggle-3"] {
-  padding-top: 6px;
-  padding-bottom: 4px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-top: -16px;
+  margin-bottom: -16px;
 
   color: #f7e184;
 
@@ -994,14 +1035,6 @@ a {
   height: 319px;
 
   background-color: #000000;
-}
-
-.lower-slider-container .lower-toggle-button:hover {
-  padding-top: 6px;
-  padding-bottom: 4px;
-
-  background-image: none;
-  background-color: #f0c52e;
 }
 
 .lower-slide-description {
@@ -1068,12 +1101,12 @@ a {
 .brands-list {
   position: relative;
   left: -1px;
-  
+
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 105px;
-  margin-bottom: 100px;
+  margin-top: 106px;
+  margin-bottom: 109px;
   margin-left: 65px;
   display: flex;
   align-items: center;
@@ -1081,27 +1114,43 @@ a {
 
 .brands-item {
   opacity: 0.2;
+
+  transition-duration: 0.5s;
+
+  padding: 0px;
+}
+
+.brands-item:first-child {
+  width: 127px;
+  height: 73px;
+}
+
+.brands-item:nth-child(2) {
+  width: 256px;
+  height: 48px;
+
+  margin-top: -1px;
+  margin-left: 109px;
+}
+
+.brands-item:nth-child(3) {
+  width: 184px;
+  height: 48px;
+
+  margin-top: -1px;
+  margin-left: 76px;
+}
+
+.brands-item:nth-child(4) {
+  width: 200px;
+  height: 56px;
+
+  margin-top: 6px;
+  margin-left: 105px;
 }
 
 .brands-item:hover {
   opacity: 1;
-}
-
-.brands-item:nth-child(1) img {
-  margin-top: 1px;
-}
-
-.brands-item:nth-child(2) img {
-  margin-left: 109px;
-}
-
-.brands-item:nth-child(3) img {
-  margin-left: 76px;
-}
-
-.brands-item:nth-child(4) img {
-  margin-top: 8px;
-  margin-left: 105px;
 }
 
 .brands-item:nth-child(1) a:hover::before {
@@ -1112,7 +1161,7 @@ a {
 
   background-image: url("../img/logo-dji-hover.jpg");
   background-repeat: no-repeat;
-  background-position: 0px 1px;
+  background-position: 0px 0px;
 }
 
 .brands-item:nth-child(2) a:hover::before {
@@ -1123,7 +1172,7 @@ a {
 
   background-image: url("../img/logo-sp-gadgets-hover.jpg");
   background-repeat: no-repeat;
-  background-position: 109px 0px;
+  background-position: 0px 0px;
 }
 
 .brands-item:nth-child(3) a:hover::before {
@@ -1134,7 +1183,7 @@ a {
 
   background-image: url("../img/logo-gopro-hover.jpg");
   background-repeat: no-repeat;
-  background-position: 76px 0px;
+  background-position: 0px 0px;
 }
 
 .brands-item:nth-child(4) a:hover::before {
@@ -1145,13 +1194,13 @@ a {
 
   background-image: url("../img/logo-vive-hover.jpg");
   background-repeat: no-repeat;
-  background-position: 105px 8px;
+  background-position: 0px 0px;
 }
 
 /*== REFERENCE BLOCK ==*/
 
 .reference-block {
-  margin-bottom: 77px;
+  margin-bottom: 123px;
   display: flex;
 }
 
@@ -1226,6 +1275,7 @@ a {
   Я мучился минут 40, в итоге вставил тупо эту свг в код и они ПОЯВИЛИСЬ!
   потом я ее удалил, но они на месте остались. Я хз че это за баг такой, расскажешь? :)
   Закрыл файл, открыл - та же фигня, вставил свг опять в код, опять появились...
+  Я в HTML этот бублик вставил и скрыл его через класс "visually-hidden", может поможет это...
 */
   position: absolute;
   top: 16px;
@@ -1265,6 +1315,8 @@ a {
 }
 
 .about-us-button {
+  top: 548px;
+
   padding-left: 23px;
   padding-right: 18px;
   margin-left: 1px;
@@ -1273,6 +1325,8 @@ a {
 /*== CONTACTS == */
 
 .contacts {
+  position: relative;
+
   width: 563px;
 }
 
@@ -1295,6 +1349,8 @@ a {
 }
 
 .contacts-button {
+  bottom: -26px;
+
   padding-left: 35px;
   padding-right: 37px;
   margin-left: 3px;
