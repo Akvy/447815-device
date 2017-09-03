@@ -553,7 +553,6 @@ a {
 }
 
 .footer-user-links span {
-
   line-height: 36px;
   color: #ffffff;
   font-weight: 300;
@@ -705,7 +704,6 @@ a {
 }
 
 .promo-description label {
-
   display: inline-block;
   content: "";
   width: 10px;
@@ -748,14 +746,8 @@ a {
   background-position: -1px -1px;
 }
 
-#upper-toggle-1:checked ~ .upper-slider .slide-1 {
-  display: flex;
-}
-
-#upper-toggle-2:checked ~ .upper-slider .slide-2 {
-  display: flex;
-}
-
+#upper-toggle-1:checked ~ .upper-slider .slide-1,
+#upper-toggle-2:checked ~ .upper-slider .slide-2,
 #upper-toggle-3:checked ~ .upper-slider .slide-3 {
   display: flex;
 }
@@ -1017,7 +1009,6 @@ a {
   position: absolute;
   top: 0;
 
-
   margin-top: 0px;
   padding-top: 0px;
   margin-bottom: 0px;
@@ -1054,8 +1045,6 @@ a {
 
 .lower-slider-container .lower-toggle-button:nth-of-type(1) {
   top: 109px;
-
-  /*background-image: linear-gradient(#ffffff 16px, #f0c52e 16px, #f0c52e 20px, #E5E5E5 20px, #f0c52e 20px, #f0c52e 24px, #E5E5E5 24px);*/
 }
 
 .lower-slider-container .lower-toggle-button:nth-of-type(2) {
@@ -1083,8 +1072,8 @@ a {
   color: #f7e184;
 
   background-color: #000000;
-  box-shadow: 120px 0px 0px 0px #000000;
   background-image: none;
+  box-shadow: 120px 0px 0px 0px #000000;
 }
 
 .lower-slider {
@@ -1139,14 +1128,8 @@ a {
   display: none;
 }
 
-#lower-toggle-1:checked ~ .lower-slider .lower-slide-1 {
-  display: block;
-}
-
-#lower-toggle-2:checked ~ .lower-slider .lower-slide-2 {
-  display: block;
-}
-
+#lower-toggle-1:checked ~ .lower-slider .lower-slide-1,
+#lower-toggle-2:checked ~ .lower-slider .lower-slide-2,
 #lower-toggle-3:checked ~ .lower-slider .lower-slide-3 {
   display: block;
 }
@@ -1186,11 +1169,11 @@ a {
 }
 
 .brands-item {
+  padding: 0px;
+
   opacity: 0.2;
 
   transition-duration: 0.5s;
-
-  padding: 0px;
 }
 
 .brands-item:first-child {
@@ -1201,7 +1184,6 @@ a {
 .brands-item:nth-child(2) {
   width: 256px;
   height: 48px;
-
   margin-top: -1px;
   margin-left: 109px;
 }
@@ -1209,7 +1191,6 @@ a {
 .brands-item:nth-child(3) {
   width: 184px;
   height: 48px;
-
   margin-top: -1px;
   margin-left: 76px;
 }
@@ -1217,7 +1198,6 @@ a {
 .brands-item:nth-child(4) {
   width: 200px;
   height: 56px;
-
   margin-top: 6px;
   margin-left: 105px;
 }
@@ -1227,10 +1207,11 @@ a {
 }
 
 .brands-item:nth-child(1) a:hover::before {
+  position: absolute;
+
   content: "";
   width: 127px;
   height: 74px;
-  position: absolute;
 
   background-image: url("../img/logo-dji-hover.jpg");
   background-repeat: no-repeat;
@@ -1238,10 +1219,11 @@ a {
 }
 
 .brands-item:nth-child(2) a:hover::before {
+  position: absolute;
+
   content: "";
   width: 400px;
   height: 100px;
-  position: absolute;
 
   background-image: url("../img/logo-sp-gadgets-hover.jpg");
   background-repeat: no-repeat;
@@ -1249,10 +1231,11 @@ a {
 }
 
 .brands-item:nth-child(3) a:hover::before {
+  position: absolute;
+
   content: "";
   width: 400px;
   height: 100px;
-  position: absolute;
 
   background-image: url("../img/logo-gopro-hover.jpg");
   background-repeat: no-repeat;
@@ -1260,10 +1243,11 @@ a {
 }
 
 .brands-item:nth-child(4) a:hover::before {
+  position: absolute;
+
   content: "";
   width: 400px;
   height: 100px;
-  position: absolute;
 
   background-image: url("../img/logo-vive-hover.jpg");
   background-repeat: no-repeat;
@@ -1318,7 +1302,6 @@ a {
 }
 
 .about-us h2 {
-
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
   letter-spacing: 0;
@@ -1343,39 +1326,20 @@ a {
 }
 
 .about-us-partners li::before {
-  /*ААААА! В общем суть в чем: я сделал свг для кружков слева от списка партнеров,
-  вставил псевдоэлементом и все было ок, но уже когда спать шел обнаружил что их нет!
-  Я мучился минут 40, в итоге вставил тупо эту свг в код и они ПОЯВИЛИСЬ!
-  потом я ее удалил, но они на месте остались. Я хз че это за баг такой, расскажешь? :)
-  Закрыл файл, открыл - та же фигня, вставил свг опять в код, опять появились...
-  Я в HTML этот бублик вставил и скрыл его через класс "visually-hidden", может поможет это...
-*/
   position: absolute;
-  top: 16px;
-  left: -34px;
+  top: 18px;
+  left: -32px;
 
   content: "";
-  width: 8px;
-  height: 8px;
+  width: 4px;
+  height: 4px;
 
-  background-image: url("../img/list-style-circle.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  box-shadow: 0px 0px 0px 2px #ececec;
+  border-radius: 50%;
 }
 
-
 .about-us-partners li:nth-child(2)::before {
-  position: absolute;
-  top: 17px;
-  left: -34px;
-
-  content: "";
-  width: 18px;
-  height: 18px;
-
-  background-image: url("../img/list-style-circle.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  top: 19px;
 }
 
 .about-us-partners li {
@@ -1452,15 +1416,15 @@ a {
 }
 
 .modal-close {
-position: absolute;
-top: 30px;
-right: 30px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
 
-padding: 0;
-margin: 0;
+  padding: 0;
+  margin: 0;
 
-background-color: inherit;
-border: none;
+  background-color: inherit;
+  border: none;
 }
 
 .modal-close svg {
@@ -1493,9 +1457,8 @@ border: none;
   margin-top: 10px;
 
   background-color: #e5e5e5;
-  opacity: 0.5;
-
   border: none;
+  opacity: 0.5;
 }
 
 .write-us-form textarea {
@@ -1522,8 +1485,8 @@ border: none;
 .write-us-form input:focus,
 .write-us-form textarea:focus {
   background-color: #ffffff;
-  opacity: 0.5;
   border: 3px solid #f0c52e;
+  opacity: 0.5;
 }
 
 .write-us-form input:invalid {
@@ -1635,7 +1598,6 @@ border: none;
   font-weight: 300;
 
   opacity: 0.3;
-
 }
 
 .breadcrumbs a:hover {
@@ -1665,14 +1627,16 @@ border: none;
 
 .filters::before {
   position: absolute;
-  top: 70px;
-  left: -150px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 0;
 
   content: "";
-  width: 150px;
-  height: 1253px;
-  background-color: inherit;
+  margin-left: calc(50% - 50vw);
 
+  background-color: inherit;
 }
 
 .filters h2 {
@@ -1693,11 +1657,14 @@ border: none;
 .filters h2::before {
   position: absolute;
   top: 0px;
-  left: -200px;
+  left: 0px;
+  right: 267px;
+  bottom: 0px;
+  z-index: 1;
+
+  margin-left: calc(50% - 50vw);
 
   content: "";
-  width: 200px;
-  height: 70px;
 
   background-color: #dbdbdb;
 }
@@ -1796,7 +1763,6 @@ border: none;
   width: 10px;
   height: 10px;
 
-  background-color: teal;
   background-position: 5px 5px;
 }
 
@@ -2087,12 +2053,15 @@ border: none;
 
 .catalog-sorting-container::after {
   position: absolute;
-  right: -140px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 832px;
+  z-index: 0;
+
+  margin-right: calc(580px - 50vw);
 
   content: "";
-  width: 140px;
-  height: 70px;
-
   background-color: inherit;
 }
 
@@ -2246,6 +2215,7 @@ border: none;
 
 .catalog-item:nth-child(2) b {
   margin-top: -16px;
+
   letter-spacing: 0.2px;
 }
 
@@ -2270,11 +2240,11 @@ border: none;
 
   width: 200px;
   display: inline-block;
-  white-space: pre-line;
   margin-top: 4.5px;
 
   line-height: 22px;
   letter-spacing: 0.9px;
+  white-space: pre-line;
 }
 
 .catalog-item-new {
@@ -2316,8 +2286,9 @@ border: none;
 
 .catalog-item-header .amature-header {
   top: -28px;
-  width: 300px;
   left: 0px;
+
+  width: 300px;
 }
 
 .catalog-item-header .profi-header {
@@ -2395,9 +2366,11 @@ border: none;
 
 .paginator-btn {
   position: absolute;
+
+  padding: 25px;
+
   background-color: inherit;
   border: none;
-  padding: 25px;
 }
 
 .paginator-btn > span {
@@ -2479,7 +2452,6 @@ border: none;
 }
 
 .hover-info-button {
-  border: none;
   position: absolute;
   top: 185px;
   left: 79px;
@@ -2492,6 +2464,8 @@ border: none;
   padding-left: 42px;
   padding-right: 38px;
   height: 8px;
+
+  border: none;
 }
 
 .hover-info-button:hover {
@@ -2505,6 +2479,8 @@ border: none;
 .catalog-picture:hover ~ .hover-info,
 .hover-info:hover {
   display: block;
+
+  cursor: pointer;
 }
 
 .catalog-item:hover > .catalog-picture {
