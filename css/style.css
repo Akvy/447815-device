@@ -2198,7 +2198,7 @@ border: none;
 
   background-color: #ebebeb;
 
-  box-shadow: 800px 0px 0px 0px #ebebeb;
+  /*box-shadow: 800px 0px 0px 0px #ebebeb;*/
 }
 
 /*.catalog-sorting-container::after {
