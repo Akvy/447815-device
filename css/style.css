@@ -194,6 +194,8 @@ a {
   padding-bottom: 12px;
   padding-left: 43px;
   width: 355px;
+
+  background-color: transparent;
 }
 
 .search-form input[placeholder] {
@@ -213,14 +215,25 @@ a {
 }
 
 .search-form input[placeholder]:focus {
-  margin-bottom: -2px;
-
   opacity: 1;
-  border-bottom: 2px solid #000000;
+  box-shadow: inset 0px -1px 0px 0px #000000,
+  0px 1px 0px 0px #000000;
 }
 
 .search-button {
   display: none;
+  position: absolute;
+  top: -1px;
+  left: 355px;
+
+  width: 85px;
+  height: 50px;
+
+  font-size: 15px;
+  line-height: 36px;
+  color: #000000;
+  text-transform: none;
+  font-weight: 300;
 }
 
 .search-input:focus ~ .search-button,
@@ -229,7 +242,7 @@ a {
   display: block;
 
   position: absolute;
-  top: 0px;
+  top: -1px;
   left: 355px;
 
   width: 85px;
@@ -383,7 +396,7 @@ a {
 .header-service-links {
   margin: 0;
   padding: 0;
-  width: 1050px;
+  width: 1060px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1496,6 +1509,8 @@ a {
 
 .modal {
   position: fixed;
+  top: 50%;
+  left: 50%;
 
   display: -webkit-box;
 
@@ -1511,9 +1526,12 @@ a {
 /*== MODAL-WRITE-US == */
 
 .modal-write-us {
-  top: 17%;
-  left: 17%;
+  top: 50%;
+  left: 50%;
   z-index: 15;
+
+  margin-top: -256px;
+  margin-left: -480px;
 }
 
 .modal-container {
@@ -1526,22 +1544,25 @@ a {
 
 .modal-close {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 20px;
+  right: 20px;
 
+  width: 55px;
+  height: 55px;
   padding: 0;
   margin: 0;
 
-  background-color: inherit;
+  background-color: transparent;
   border: none;
-
-  cursor: pointer;
+  opacity: 0.5;
 }
 
-.modal-close svg {
-  position: absolute;
-  top: -5px;
-  right: -5px;
+.modal-close:hover {
+  opacity: 1;
+}
+
+.modal-close:active {
+  opacity: 0.3;
 }
 
 .write-us-form-container {
@@ -1566,12 +1587,37 @@ a {
   line-height: 18px;
 }
 
+.input-wrapper,
+.textarea-wrapper {
+  opacity: 0.5;
+}
+
+.input-wrapper:hover,
+.textarea-wrapper:hover {
+  opacity: 0.8;
+}
+
+.input-wrapper:focus,
+.textarea-wrapper:focus {
+  opacity: 1;
+}
+
+.textarea-wrapper textarea {
+  width: 760px;
+  height: 175px;
+  margin-bottom: 25px;
+  padding-bottom: 0px;
+}
+
+
+
 .write-us-form input,
 .write-us-form textarea {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 20px;
   margin-top: 10px;
+  box-sizing: border-box;
 
   background-color: #e5e5e5;
   border: none;
@@ -1594,13 +1640,8 @@ a {
   margin-bottom: 35px;
 }
 
-.form-upper-container label {
+.form-upper-container input {
   width: 360px;
-}
-
-.write-us-form input:hover,
-.write-us-form textarea:hover {
-  opacity: 0.8;
 }
 
 .write-us-form input:focus,
@@ -1640,25 +1681,22 @@ a {
 /*== MODAL POP-UP-MAP ==*/
 
 .modal-popup-map {
-  top: 17%;
-  left: 18%;
+  top: 50%;
+  left: 50%;
   z-index: 15;
 
-  width: 900px;
-  height: 450px;
+  width: 960px;
+  height: 480px;
+  margin-top: -230px;
+  margin-left: -480px;
+
+  background-color: transparent;
 }
 
 .modal-popup-map .modal-close {
-position: absolute;
-top: 27px;
-right: 41px;
+top: 20px;
+right: 52px;
 
-padding: 0;
-margin: 0;
-
-background-color: inherit;
-opacity: 0.5;
-border: none;
 }
 
 .modal-popup-map img {
@@ -2469,8 +2507,8 @@ border: none;
   top: -28px;
   left: 0px;
 
-  width: 247px;
-  padding-right: 49px;
+  width: 255px;
+  padding-right: 41px;
 }
 
 .catalog-item-header .profi-header {
@@ -2487,8 +2525,8 @@ border: none;
   top: -28px;
   left: 0px;
 
-  width: 255px;
-  padding-right: 28px;
+  width: 265px;
+  padding-right: 19px;
 
   letter-spacing: 0.7px;
 }
@@ -2497,9 +2535,9 @@ border: none;
   top: -29px;
   left: 0px;
 
-  width: 230px;
+  width: 250px;
   padding-top: 35px;
-  padding-right: 54px;
+  padding-right: 31px;
 
   line-height: 22px;
 }
@@ -2545,6 +2583,7 @@ border: none;
 .paginator {
   list-style: none;
   margin-left: 318px;
+  margin-right: 303px;
   margin-top: 1px;
   padding: 0;
   display: -webkit-box;
