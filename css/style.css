@@ -2277,13 +2277,13 @@ border: none;
 }
 
 .sorting-priority {
-  margin-top: 17px;
+  margin-top: 18px;
   margin-left: 236px;
 }
 
 .sorting-toggle {
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   display: inline-block;
 
   vertical-align: middle;
@@ -2293,34 +2293,36 @@ border: none;
 }
 
 .sorting-toggle.descending {
-  margin-left: 12px;
+  margin-left: 18px;
 }
 
 .sorting-item .ascending {
   background-image: url("../img/icon-up-dir.svg");
   background-repeat: no-repeat;
-  background-position: 1px 4px;
+  background-position: 1px 1px;
 }
 
 .sorting-item .descending {
   background-image: url("../img/icon-down-dir.svg");
   background-repeat: no-repeat;
-  background-position: 4px 4px;
+  background-position: 1px 1px;
 }
 
 .sorting-item-current a {
   opacity: 1;
 }
 
-.sorting-priority .sorting-item-current {
+.sorting-item-current button {
   opacity: 0.2;
 }
 
-.sorting-priority .sorting-item:hover {
+.sorting-item button:hover {
   opacity: 0.4;
+
+  cursor: pointer;
 }
 
-.sorting-priority .sorting-item:active {
+.sorting-item button:active {
   opacity: 1;
 }
 
@@ -2467,23 +2469,26 @@ border: none;
   top: -28px;
   left: 0px;
 
-  width: 300px;
+  width: 247px;
+  padding-right: 49px;
 }
 
 .catalog-item-header .profi-header {
   top: -29px;
-  right: -279px;
+  right: -286px;
 
   padding-top: 35px;
-  padding-right: 80px;
+  padding-right: 114px;
   margin-top: 0;
+  width: 172px;
 }
 
 .catalog-item-header .unsubmergible-header {
   top: -28px;
   left: 0px;
 
-  width: 300px;
+  width: 255px;
+  padding-right: 28px;
 
   letter-spacing: 0.7px;
 }
@@ -2494,7 +2499,7 @@ border: none;
 
   width: 230px;
   padding-top: 35px;
-  padding-right: 50px;
+  padding-right: 54px;
 
   line-height: 22px;
 }
