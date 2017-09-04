@@ -1765,6 +1765,9 @@ border: none;
   padding-left: 61px;
 
   background-color: #efefef;
+
+  box-shadow: -250px 0px 0px 0px #efefef,
+  -500px 0px 0px 0px #efefef;
 }
 
 /*.filters::before {
@@ -1794,6 +1797,8 @@ border: none;
   letter-spacing: 3.5px;
 
   background-color: #dbdbdb;
+  box-shadow: -250px 0px 0px 0px #dbdbdb,
+  -500px 0px 0px 0px #dbdbdb;
 }
 
 /*.filters h2::before {
@@ -2198,7 +2203,7 @@ border: none;
 
   background-color: #ebebeb;
 
-  /*box-shadow: 800px 0px 0px 0px #ebebeb;*/
+  box-shadow: 800px 0px 0px 0px #ebebeb;
 }
 
 /*.catalog-sorting-container::after {
