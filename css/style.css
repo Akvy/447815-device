@@ -1796,7 +1796,7 @@ border: none;
   background-color: #dbdbdb;
 }
 
-.filters h2::before {
+/*.filters h2::before {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1809,7 +1809,7 @@ border: none;
   content: "";
 
   background-color: #dbdbdb;
-}
+}*/
 
 .price-filter {
   margin-top: 79px;
