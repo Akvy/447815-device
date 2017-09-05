@@ -227,7 +227,7 @@ a {
 }
 
 .search-button {
-  /*display: none;*/
+  display: none;
   position: absolute;
   top: -1px;
   left: 355px;
@@ -445,7 +445,7 @@ a {
 }
 
 .header-service-links > li:nth-child(4) {
-  margin-left: 104px;
+  margin-left: 103px;
 }
 
 .header-service-link {
