@@ -1573,7 +1573,7 @@ a {
   padding-bottom: 30px;
 }
 
-.write-us-form label {
+.write-us-form .outer-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
