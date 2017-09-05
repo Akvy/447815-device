@@ -194,8 +194,14 @@ a {
   padding-bottom: 12px;
   padding-left: 43px;
   width: 355px;
+  min-height: 48px;
 
   background-color: transparent;
+
+
+
+  box-shadow: inset 0px -1px 0px 0px #000000,
+  0px 1px 0px 0px #000000;
 }
 
 .search-form input[placeholder] {
@@ -221,7 +227,7 @@ a {
 }
 
 .search-button {
-  display: none;
+  /*display: none;*/
   position: absolute;
   top: -1px;
   left: 355px;
@@ -408,7 +414,7 @@ a {
 
 .header-service-links .header-service-link {
   font-size: 17px;
-  letter-spacing: 4.25px;
+  letter-spacing: 0.24em;
 }
 
 .header-service-links li:first-child {
@@ -431,11 +437,11 @@ a {
 }
 
 .header-service-links > li:nth-child(2) {
-  margin-left: 318px;
+  margin-left: 320px;
 }
 
 .header-service-links > li:nth-child(3) {
-  margin-left: 30px;
+  margin-left: 32px;
 }
 
 .header-service-links > li:nth-child(4) {
