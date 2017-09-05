@@ -429,15 +429,15 @@ a {
 }
 
 .header-service-links > li:nth-child(2) {
-  margin-left: 324px;
+  margin-left: 334px;
 }
 
 .header-service-links > li:nth-child(3) {
-  margin-left: 35px;
+  margin-left: 41px;
 }
 
 .header-service-links > li:nth-child(4) {
-  margin-left: 110px;
+  margin-left: 115px;
 }
 
 .header-service-link {
@@ -445,7 +445,7 @@ a {
   font-size: 17px;
   color: #000000;
   text-transform: uppercase;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.20em;
 }
 
 .header-user-links a:hover,
