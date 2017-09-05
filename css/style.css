@@ -343,7 +343,7 @@ a {
 .header-dropping-list:hover {
   position: absolute;
   top: 25px;
-  left: -55px;
+  left: -59px;
   z-index: 5;
 
   display: -webkit-box;
@@ -371,12 +371,12 @@ a {
       flex-basis: 45px;
 }
 
-.header-dropping-list .row-1,
-.header-dropping-list .row-2 {
+.header-dropping-list .dropping-list-row-1,
+.header-dropping-list .dropping-list-row-2 {
   margin-left: 60px;
 }
 
-.header-dropping-list .row-3 {
+.header-dropping-list .dropping-list-row-3 {
   -ms-flex-preferred-size: 65px;
       flex-basis: 65px;
   margin-left: 75px;
@@ -407,8 +407,10 @@ a {
   margin-bottom: 19px;
 }
 
-.header-service-links li:first-child {
+.header-service-links > li:first-child {
   position: relative;
+
+  margin-left: 4px;
 }
 
 .header-service-links > li:first-child::after {
@@ -427,25 +429,23 @@ a {
 }
 
 .header-service-links > li:nth-child(2) {
-  margin-left: 330px;
+  margin-left: 324px;
 }
 
 .header-service-links > li:nth-child(3) {
-  margin-left: 37px;
+  margin-left: 35px;
 }
 
 .header-service-links > li:nth-child(4) {
-  margin-left: 111px;
+  margin-left: 110px;
 }
 
 .header-service-link {
-  margin-left: 4px;
-
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 17px;
   color: #000000;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.24em;
 }
 
 .header-user-links a:hover,
