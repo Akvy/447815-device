@@ -10,6 +10,9 @@ var mailstorage = localStorage.getItem ("mail");
 var mapbtn = document.querySelector(".map");
 var map = document.querySelector(".modal-popup-map");
 var mapClose = map.querySelector(".modal-close");
+var inputForm = form.querySelector(".input-wrapper");
+var inputMail = form.querySelector(".mail-wrapper");
+var textareaForm = form.querySelector(".textarea-wrapper")
 
 writebtn.addEventListener("click", function(evt) {
   evt.preventDefault();
@@ -40,6 +43,21 @@ form.addEventListener("submit", function(evt) {
   } else {
     localStorage.setItem("fullname", fullname.value);
     localStorage.setItem("mail", mail.value);
+  }
+  if (!fullname.value) {
+    inputForm.classList.add("modal-invalid");
+  } else {
+    inputForm.classList.remove("modal-invalid");
+  }
+  if (!mail.value) {
+    inputMail.classList.add("modal-invalid");
+  } else {
+    inputMail.classList.remove("modal-invalid");
+  }
+  if (!comments.value) {
+    textareaForm.classList.add("modal-invalid");
+  } else {
+    textareaForm.classList.remove("modal-invalid");
   }
 });
 
