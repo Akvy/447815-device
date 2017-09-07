@@ -202,7 +202,7 @@
           </li>
           <li class="item-group">
             <div class="item-group-container">
-              <a href="#">
+              <a href="catalog.html">
                 <h3 class="item-class-description item-class-second-description">Моноподы для селфи</h3>
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="86" height="117" viewBox="0 0 86 117">
@@ -364,7 +364,7 @@
         </section> <!-- end contacts -->
       </div> <!-- end reference-block -->
 
-      <section class="modal modal-write-us visually-hidden">
+      <section class="modal modal-write-us modal-hide">
         <div class="modal-container">
           <button class="modal-close" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
@@ -380,7 +380,7 @@
               <div class="form-upper-container">
                 <div class="outer-wrapper">Ваше имя:
                   <div class="input-wrapper">
-                    <input type="text" name="name" placeholder="Представьтесь, пожалуйста">
+                    <input type="text" name="fullname" placeholder="Представьтесь, пожалуйста">
                   </div>
                 </div>
 
@@ -393,7 +393,7 @@
 
               <div class="outer-wrapper">Текст письма:
                 <div class="textarea-wrapper">
-                  <textarea name="customer-comments" placeholder="В свободной форме" rows="16" cols="76"></textarea>
+                  <textarea name="comments" placeholder="В свободной форме" rows="16" cols="76"></textarea>
                 </div>
               </div>
 
@@ -405,7 +405,7 @@
         </div>
       </section> <!-- end modal modal-write-us -->
 
-      <section class="modal modal-popup-map visually-hidden">
+      <section class="modal modal-popup-map modal-hide">
         <button class="modal-close" type="button">
           <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
             <path fill="#F0C52E" d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z"/>
@@ -413,14 +413,16 @@
           <span class="visually-hidden">Закрыть</span>
         </button>
         <h2 class="visually-hidden">Всплывающая карта</h2>
-        <img src="img/popup-map.png" class="popup-map" width="960" height="560" alt="Наш адрес: г. Москва, ул. Строителей, 15">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931592807!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTE5MzEx!5e0!3m2!1sru!2scz!4v1504744860197" width="960" height="560" frameborder="0" style="border:0" allowfullscreen>
+        </iframe>
       </section> <!-- end modal modal-popup-map -->
     </main>
 
     <footer class="main-footer">
       <div class="container">
         <div class="footer-left-part">
-          <a class="main-footer-logo">
+          <a href="#" class="main-footer-logo">
             <p>DEVICE</p>
           </a>
 
@@ -511,5 +513,7 @@
         </div> <!-- end footer-right-part -->
       </div>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
