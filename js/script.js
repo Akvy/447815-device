@@ -12,7 +12,7 @@ var map = document.querySelector(".modal-popup-map");
 var mapClose = map.querySelector(".modal-close");
 var inputForm = form.querySelector(".input-wrapper");
 var inputMail = form.querySelector(".mail-wrapper");
-var textareaForm = form.querySelector(".textarea-wrapper")
+var textareaForm = form.querySelector(".textarea-wrapper");
 
 writebtn.addEventListener("click", function(evt) {
   evt.preventDefault();
