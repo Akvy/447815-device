@@ -1107,10 +1107,8 @@ a {
   background-position: 50px 9px;
 }
 
-.fitness-description {
-  white-space: nowrap;
-
-  background-image: url("../img/popular-fitness-bracer.svg");
+.item-group-container .fitness-description {
+  background-image: url("../img/popular-fitness-bracers.svg");
   background-repeat: no-repeat;
   background-position: 29px 21px;
 }
