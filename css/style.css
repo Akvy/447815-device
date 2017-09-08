@@ -54,29 +54,35 @@
 
   @-webkit-keyframes quake {
     0%, 100% {
-      -webkit-transform: translateX(0px);transform: translateX(0px);
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px);
     }
 
     10%, 30%, 50%, 70%, 90% {
-      -webkit-transform: translateX(5px);transform: translateX(5px);
+      -webkit-transform: translateX(5px);
+      transform: translateX(5px);
     }
 
     20%, 40%, 60%, 80% {
-      -webkit-transform: translateX(-5px);transform: translateX(-5px);
+      -webkit-transform: translateX(-5px);
+      transform: translateX(-5px);
     }
   }
 
   @keyframes quake {
     0%, 100% {
-      -webkit-transform: translateX(0px);transform: translateX(0px);
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px);
     }
 
     10%, 30%, 50%, 70%, 90% {
-      -webkit-transform: translateX(5px);transform: translateX(5px);
+      -webkit-transform: translateX(5px);
+      transform: translateX(5px);
     }
 
     20%, 40%, 60%, 80% {
-      -webkit-transform: translateX(-5px);transform: translateX(-5px);
+      -webkit-transform: translateX(-5px);
+      transform: translateX(-5px);
     }
   }
 
@@ -1155,14 +1161,8 @@ a {
   padding-right: 16px;
   height: 8px;
 
-          -webkit-transition-property: padding, margin, -webkit-box-shadow;
-transition-property: padding, margin, -webkit-box-shadow;
--o-transition-property: padding, margin, box-shadow;
-transition-property: padding, margin, box-shadow;
-transition-property: padding, margin, box-shadow, -webkit-box-shadow;
--webkit-transition-duration: 150ms, 150ms, 0ms;
--o-transition-duration: 150ms, 150ms, 10ms;
-        transition-duration: 150ms, 150ms, 0ms;
+  transition-property: padding, margin, box-shadow;
+  transition-duration: 150ms, 150ms, 0ms;
 }
 
 .lower-toggle-button:hover {
